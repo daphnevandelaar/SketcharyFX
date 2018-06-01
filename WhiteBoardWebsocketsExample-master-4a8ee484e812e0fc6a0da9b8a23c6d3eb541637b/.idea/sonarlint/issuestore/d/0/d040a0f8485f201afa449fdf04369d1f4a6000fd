@@ -1,0 +1,7 @@
+
+T
+squid:S1069"9Replace this use of System.out or System.err by a logger.(“äáÇùÿÿÿÿ
+Asquid:S11818"%Catch Exception instead of Throwable.(•”ø¾øÿÿÿÿ
+nsquid:UselessImportCheck"JRemove this unused import 'org.glassfish.jersey.servlet.ServletContainer'.(´ì˜’
+hsquid:UselessImportCheck"DRemove this unused import 'org.eclipse.jetty.servlet.ServletHolder'.(¶ßžŸ
+bsquid:CommentedOutCodeLine5"<This block of commented-out lines of code should be removed.(Îæ¾í

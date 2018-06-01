@@ -1,0 +1,9 @@
+
+Ssquid:S1068"0Remove this unused "communicator" private field.(¤§÷¿øÿÿÿÿ8ÊÒÓ•»,
+^squid:UselessImportCheck"5Remove this unused import 'javafx.event.ActionEvent'.(î•¯¼ıÿÿÿÿ
+wsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ã¢†üÿÿÿÿ
+csquid:UselessImportCheck	":Remove this unused import 'javafx.scene.control.CheckBox'.(¸şıÿÿÿÿ
+usquid:UselessImportCheck"LRemove this unused import 'DrawWebSocket.DrawSocketClient.DrawSocketClient'.(şí†Îùÿÿÿÿ
+hsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(å€ó}8ÚâÙ•»,
+Hsquid:S1068"*Remove this unused "drawer" private field.(€¬Œõ8“Ş•»,
+hsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(¢Šó8“Ş•»,

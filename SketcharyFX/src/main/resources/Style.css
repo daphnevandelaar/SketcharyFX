@@ -1,0 +1,6 @@
+.Canvas {
+    -fx-background-color: antiquewhite, white ;
+    -fx-border-color: black;
+    -fx-background-insets: 0, 20 ;
+    -fx-padding: 20 ;
+}

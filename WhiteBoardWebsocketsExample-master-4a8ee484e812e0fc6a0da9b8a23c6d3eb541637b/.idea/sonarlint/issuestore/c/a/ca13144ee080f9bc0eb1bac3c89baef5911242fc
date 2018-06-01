@@ -1,0 +1,28 @@
+
+psquid:S1192+"ZDefine a constant instead of duplicating this literal "[WebSocket Session ID] : " 3 times.(•é«K
+N
+squid:S106+"9Replace this use of System.out or System.err by a logger.(•é«K
+N
+squid:S1061"9Replace this use of System.out or System.err by a logger.(‡è#
+T
+squid:S106C"9Replace this use of System.out or System.err by a logger.(Ç ‡ùÿÿÿÿ
+T
+squid:S1067"9Replace this use of System.out or System.err by a logger.(¸Î‰Õûÿÿÿÿ
+O
+squid:S106#"9Replace this use of System.out or System.err by a logger.(¥ÿÕ°
+O
+squid:S1068"9Replace this use of System.out or System.err by a logger.(ŒÅ³ù
+T
+squid:S106k"9Replace this use of System.out or System.err by a logger.(ÔøõÛÿÿÿÿÿ
+O
+squid:S106n"9Replace this use of System.out or System.err by a logger.(Ôğ¯Î
+O
+squid:S106r"9Replace this use of System.out or System.err by a logger.(§Å™
+T
+squid:S106&"9Replace this use of System.out or System.err by a logger.(¼×éÜøÿÿÿÿ
+nsquid:S3776<"RRefactor this method to reduce its Cognitive Complexity from 21 to the 15 allowed.(Œö…íüÿÿÿÿ
+T
+squid:S106h"9Replace this use of System.out or System.err by a logger.(¦±ëüÿÿÿÿ
+Hsquid:S1481$",Remove this unused "message" local variable.(æª‚êüÿÿÿÿ
+Wsquid:S1854$";Remove this useless assignment to local variable "message".(æª‚êüÿÿÿÿ
+jsquid:S3824Q"NReplace this "Map.get()" and condition with a call to "Map.computeIfAbsent()".(ÕïÅ®üÿÿÿÿ
