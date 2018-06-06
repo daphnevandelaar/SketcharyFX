@@ -1,9 +1,30 @@
 package Models;
 
 public class User {
+    private int id;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
     private String username;
+    private String password;
     private int level = 1;
-    private int points = 0;
+    private int expPoints = 0;
+
+    //empty to create in database usercontext
+    public User() {
+
+    }
+
+
+    public String getPassword() { return password; }
+
+    public void setPassword(String password) { this.password = password; }
 
     public User(String username) {
         this.username = username;
@@ -17,8 +38,8 @@ public class User {
         this.level = level;
     }
 
-    public void setPoints(int points) {
-        this.points = points;
+    public void setExpPoints(int expPoints) {
+        this.expPoints = expPoints;
     }
 
     public String getUsername() {
@@ -29,12 +50,12 @@ public class User {
         return level;
     }
 
-    public int getPoints() {
-        return points;
+    public int getExpPoints() {
+        return expPoints;
     }
 
     @Override
     public String toString() {
-        return username + "   Level: " + level + "   Punten: " + points;
+        return username + "   Level: " + level + "   Punten: " + expPoints;
     }
 }

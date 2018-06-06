@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
 <?import javafx.scene.canvas.Canvas?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ListView?>
@@ -10,7 +14,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
-<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SketcharyGUI.Controller">
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SketcharyGUI.Controller">
    <columnConstraints>
       <ColumnConstraints />
    </columnConstraints>
@@ -27,7 +31,7 @@
             <TextField id="tbMessage" fx:id="tbMessage" layoutX="780.0" layoutY="768.0" prefHeight="25.0" prefWidth="240.0" />
             <Button fx:id="btnSend" layoutX="1033.0" layoutY="768.0" mnemonicParsing="false" onAction="#btnSend_OnClick" prefHeight="25.0" prefWidth="74.0" text="Verstuur" />
             <Canvas id="cvWhiteboard" fx:id="cvWhiteboard" height="709.0" layoutX="31.0" layoutY="27.0" onMouseDragged="#cvWhiteboard_OnMouseDrag" width="683.0" />
-            <Button layoutX="56.0" layoutY="768.0" mnemonicParsing="false" text="Gummen" />
+            <Button fx:id="btnTest" layoutX="56.0" layoutY="768.0" mnemonicParsing="false" onAction="#btnTest_OnClick" text="Gummen" />
             <Button fx:id="btnSubscribe" layoutX="601.0" layoutY="768.0" mnemonicParsing="false" onAction="#btnSubscribe_OnClick" text="Subscribe" />
             <!--<Button fx:id="btnTest" layoutX="270.0" layoutY="768.0" mnemonicParsing="false" onAction="#btnTest_OnClick" text="Button" />-->
             <!--<Button fx:id="btnTestt" layoutX="200.0" layoutY="768.0" mnemonicParsing="false" onAction="#btnTestt_OnClick" text="enable" />-->

@@ -3,6 +3,8 @@ package SketcharyGUI;
 import DrawWebSocket.DrawSocketClient.DrawMessage;
 import DrawWebSocket.DrawSocketClient.DrawSocketClient;
 import DrawWebSocket.DrawSocketClient.Drawer;
+import Factory.UserFactory;
+import Logic.IUserLogic;
 import Models.DrawEvent;
 import Models.User;
 import SketcharyLogic.WhiteboardHandler;
@@ -12,6 +14,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
+import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
@@ -36,6 +39,9 @@ public class Controller implements Observer {
     private TextField tbMessage;
     @FXML
     private TextField tbUsername;
+    @FXML
+            private Button btnTest;
+
 
     WhiteboardHandler whiteboardHandler = new WhiteboardHandler();
     Drawer drawer = null;
@@ -52,6 +58,13 @@ public class Controller implements Observer {
 //        cvWhiteboard.setDisable(false);
 //        System.out.println("Gekliktttt");
 //    }
+
+    @FXML
+    private void btnTest_OnClick(ActionEvent event){
+        IUserLogic userLogic = UserFactory.ManageUsers();
+
+        lvGameParticipants.getItems().add(userLogic.getAllUsers());
+    }
 
     @FXML
     private void btnLogin_OnClick(ActionEvent event){
