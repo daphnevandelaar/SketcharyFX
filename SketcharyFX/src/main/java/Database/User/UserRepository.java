@@ -8,7 +8,7 @@ public class UserRepository extends Repository<User> implements IUserRepository{
 
     private IUserContext userContext;
 
-    public UserRepository(IUserContext<User> context) {
+    public UserRepository(IUserContext context) {
         super(context);
     }
 

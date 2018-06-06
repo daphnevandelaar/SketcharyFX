@@ -63,7 +63,12 @@ public class Controller implements Observer {
     private void btnTest_OnClick(ActionEvent event){
         IUserLogic userLogic = UserFactory.ManageUsers();
 
-        lvGameParticipants.getItems().add(userLogic.getAllUsers());
+        for (User u :
+                userLogic.getAllUsers()) {
+            lvGameParticipants.getItems().add(u);
+        }
+
+
     }
 
     @FXML

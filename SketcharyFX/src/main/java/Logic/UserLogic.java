@@ -16,7 +16,7 @@ public class UserLogic implements IUserLogic {
 
     @Override
     public List<User> getAllUsers() {
-        List<User> users = new ArrayList<User>();
+        List<User> users = new ArrayList<>();
         userRepository.getAll().forEach(users::add);
 
         return users;

@@ -2,6 +2,11 @@ package Models;
 
 public class User {
     private int id;
+    private String username;
+    private String password;
+    private int level = 1;
+    private int expPoints = 0;
+
 
     public int getId() {
         return id;
@@ -10,11 +15,6 @@ public class User {
     public void setId(int id) {
         this.id = id;
     }
-
-    private String username;
-    private String password;
-    private int level = 1;
-    private int expPoints = 0;
 
     //empty to create in database usercontext
     public User() {

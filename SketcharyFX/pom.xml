@@ -8,6 +8,18 @@
     <artifactId>whiteboard</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <properties>
+        <restlet-version>2.3.1</restlet-version>
+    </properties>
+
+    <repositories>
+        <repository>
+            <id>maven-restlet</id>
+            <name>Public online Restlet repository</name>
+            <url>http://maven.restlet.com</url>
+        </repository>
+    </repositories>
+
     <build>
         <plugins>
             <plugin>
@@ -23,6 +35,24 @@
     </build>
 
     <dependencies>
+
+<!--REST API Swagger.io & studio.restlet.com-->
+    <dependency>
+        <groupId>org.restlet.jse</groupId>
+        <artifactId>org.restlet</artifactId>
+        <version>${restlet-version}</version>
+    </dependency>
+    <dependency>
+        <groupId>org.restlet.jse</groupId>
+        <artifactId>org.restlet.ext.jackson</artifactId>
+        <version>${restlet-version}</version>
+    </dependency>
+    <dependency>
+        <groupId>org.restlet.jse</groupId>
+        <artifactId>org.restlet.ext.jetty</artifactId>
+        <version>${restlet-version}</version>
+    </dependency>
+
         <!--Jetty-->
         <dependency>
             <groupId>org.eclipse.jetty</groupId>
@@ -91,6 +121,95 @@
             <version>9.4.1212</version>
         </dependency>
 
+            <dependency>
+                <groupId>org.restlet.jse</groupId>
+                <artifactId>org.restlet</artifactId>
+                <version>${restlet-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.restlet.jse</groupId>
+                <artifactId>org.restlet.ext.jackson</artifactId>
+                <version>${restlet-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.restlet.jse</groupId>
+                <artifactId>org.restlet.ext.jetty</artifactId>
+                <version>${restlet-version}</version>
+            </dependency>
+
     </dependencies>
-    
+    <build>
+
+
+    <plugins>
+
+
+    <plugin>
+
+    <artifactId>maven-compiler-plugin</artifactId>
+
+    <version>3.2</version>
+
+
+    <configuration>
+
+    <source>1.7</source>
+
+    <target>1.7</target>
+
+</configuration>
+
+</plugin>
+
+
+    <plugin>
+
+    <groupId>org.apache.maven.plugins</groupId>
+
+    <artifactId>maven-shade-plugin</artifactId>
+
+    <version>2.3</version>
+
+
+    <executions>
+
+
+    <execution>
+
+    <phase>package</phase>
+
+
+    <goals>
+
+    <goal>shade</goal>
+
+</goals>
+
+
+    <configuration>
+
+
+    <transformers>
+
+
+    <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+
+
+    <manifestEntries>
+
+    <Main-Class>net.apispark.webapi.WebApiHost</Main-Class>
+
+</manifestEntries>
+
+</transformer>
+
+</transformers>
+
+</configuration>
+
+</execution>
+</executions>
+</plugin>
+</plugins>
+</build>
 </project>

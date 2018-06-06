@@ -12,7 +12,7 @@ import static java.sql.Types.INTEGER;
 import static java.sql.Types.VARCHAR;
 
 
-public class UserSqlContext<User> extends SqlContext<User> implements IUserContext{
+public class UserSqlContext extends SqlContext<User> implements IUserContext{
 
     private Iterable<SqlParameter> UserSqlParameters(User user){
 
@@ -71,7 +71,7 @@ public class UserSqlContext<User> extends SqlContext<User> implements IUserConte
 
         return UsersFromResultSet(getDataByView(query));
     }
-    
+
     @Override
     public void insert(User entity) {
 
@@ -82,11 +82,6 @@ public class UserSqlContext<User> extends SqlContext<User> implements IUserConte
 
 
 
-    }
-
-    @Override
-    public User getById(int id) {
-        return null;
     }
 
     @Override

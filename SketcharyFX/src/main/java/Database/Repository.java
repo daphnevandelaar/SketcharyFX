@@ -18,7 +18,7 @@ public class Repository<T> implements IRepository<T> {
 
     @Override
     public Iterable<T> getAll() {
-        return null;
+        return context.getAll();
     }
 
     @Override
