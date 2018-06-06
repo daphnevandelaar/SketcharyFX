@@ -2,6 +2,7 @@ package Logic;
 
 import Database.User.IUserRepository;
 import Models.User;
+import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,11 +25,11 @@ public class UserLogic implements IUserLogic {
 
     @Override
     public void insert(User user) {
-
+        throw new NotImplementedException();
     }
 
     @Override
     public List<User> getUserByLevel(int level) {
-        return null;
+        throw new NotImplementedException();
     }
 }

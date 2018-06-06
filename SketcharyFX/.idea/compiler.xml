@@ -20,7 +20,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="SketcharyFX" target="1.8" />
+      <module name="SketcharyFX" target="8" />
     </bytecodeTargetLevel>
   </component>
 </project>

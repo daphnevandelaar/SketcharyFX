@@ -2,214 +2,133 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
 
-    <groupId>groupId</groupId>
-    <artifactId>whiteboard</artifactId>
-    <version>1.0-SNAPSHOT</version>
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>net.apispark.webapi</groupId>
+  <artifactId>server.simpleInventoryApi</artifactId>
+  <version>1.0.0-SNAPSHOT</version>
 
-    <properties>
-        <restlet-version>2.3.1</restlet-version>
-    </properties>
+  <properties>
+      <restlet-version>2.3.1</restlet-version>
+  </properties>
+  
+  <repositories>
+    <repository>
+      <id>maven-restlet</id>
+      <name>Public online Restlet repository</name>
+      <url>http://maven.restlet.com</url>
+    </repository>
+  </repositories>
 
-    <repositories>
-        <repository>
-            <id>maven-restlet</id>
-            <name>Public online Restlet repository</name>
-            <url>http://maven.restlet.com</url>
-        </repository>
-    </repositories>
-
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.1</version>
-                <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
-
-    <dependencies>
-
-<!--REST API Swagger.io & studio.restlet.com-->
+  <dependencies>
     <dependency>
-        <groupId>org.restlet.jse</groupId>
-        <artifactId>org.restlet</artifactId>
-        <version>${restlet-version}</version>
+      <groupId>org.restlet.jse</groupId>
+      <artifactId>org.restlet</artifactId>
+      <version>${restlet-version}</version>
     </dependency>
     <dependency>
-        <groupId>org.restlet.jse</groupId>
-        <artifactId>org.restlet.ext.jackson</artifactId>
-        <version>${restlet-version}</version>
+      <groupId>org.restlet.jse</groupId>
+      <artifactId>org.restlet.ext.jackson</artifactId>
+      <version>${restlet-version}</version>
     </dependency>
     <dependency>
-        <groupId>org.restlet.jse</groupId>
-        <artifactId>org.restlet.ext.jetty</artifactId>
-        <version>${restlet-version}</version>
+      <groupId>org.restlet.jse</groupId>
+      <artifactId>org.restlet.ext.jetty</artifactId>
+      <version>${restlet-version}</version>
     </dependency>
 
-        <!--Jetty-->
-        <dependency>
-            <groupId>org.eclipse.jetty</groupId>
-            <artifactId>jetty-server</artifactId>
-            <version>9.4.7.v20170914</version>
-        </dependency>
-        <dependency>
-            <groupId>org.eclipse.jetty</groupId>
-            <artifactId>jetty-servlet</artifactId>
-            <version>9.4.7.v20170914</version>
-        </dependency>
+    <!-- https://mvnrepository.com/artifact/org.springframework/spring-jdbc -->
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-jdbc</artifactId>
+      <version>3.0.4.RELEASE</version>
+    </dependency>
 
-        <!--  Gson: Java to Json conversion -->
-        <dependency>
-            <groupId>com.google.code.gson</groupId>
-            <artifactId>gson</artifactId>
-            <version>2.8.2</version>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.httpcomponents</groupId>
-            <artifactId>httpclient</artifactId>
-            <version>4.5.3</version>
-        </dependency>
+    <!-- WebSockets -->
+    <dependency>
+      <groupId>javax.websocket</groupId>
+      <artifactId>javax.websocket-client-api</artifactId>
+      <version>1.1</version>
+      <type>jar</type>
+    </dependency>
+    <dependency>
+      <groupId>javax.websocket</groupId>
+      <artifactId>javax.websocket-api</artifactId>
+      <version>1.0</version>
+      <type>jar</type>
+    </dependency>
+    <dependency>
+      <groupId>org.eclipse.jetty.websocket</groupId>
+      <artifactId>javax-websocket-client-impl</artifactId>
+      <version>9.4.7.v20170914</version>
+    </dependency>
+    <dependency>
+      <groupId>org.eclipse.jetty.websocket</groupId>
+      <artifactId>javax-websocket-server-impl</artifactId>
+      <version>9.4.7.v20170914</version>
+    </dependency>
+    <dependency>
+      <groupId>javax</groupId>
+      <artifactId>javaee-api</artifactId>
+      <version>7.0</version>
+      <type>jar</type>
+    </dependency>
 
-        <!-- WebSockets -->
-        <dependency>
-            <groupId>javax.websocket</groupId>
-            <artifactId>javax.websocket-client-api</artifactId>
-            <version>1.1</version>
-            <type>jar</type>
-        </dependency>
-        <dependency>
-            <groupId>javax.websocket</groupId>
-            <artifactId>javax.websocket-api</artifactId>
-            <version>1.0</version>
-            <type>jar</type>
-        </dependency>
-        <dependency>
-            <groupId>org.eclipse.jetty.websocket</groupId>
-            <artifactId>javax-websocket-client-impl</artifactId>
-            <version>9.4.7.v20170914</version>
-        </dependency>
-        <dependency>
-            <groupId>org.eclipse.jetty.websocket</groupId>
-            <artifactId>javax-websocket-server-impl</artifactId>
-            <version>9.4.7.v20170914</version>
-        </dependency>
-        <dependency>
-            <groupId>javax</groupId>
-            <artifactId>javaee-api</artifactId>
-            <version>7.0</version>
-            <type>jar</type>
-        </dependency>
+    <!--  Gson: Java to Json conversion -->
+    <dependency>
+      <groupId>com.google.code.gson</groupId>
+      <artifactId>gson</artifactId>
+      <version>2.8.2</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.httpcomponents</groupId>
+      <artifactId>httpclient</artifactId>
+      <version>4.5.3</version>
+    </dependency>
 
-        <!-- https://mvnrepository.com/artifact/org.springframework/spring-jdbc -->
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-jdbc</artifactId>
-            <version>3.0.4.RELEASE</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.postgresql</groupId>
-            <artifactId>postgresql</artifactId>
-            <version>9.4.1212</version>
-        </dependency>
-
-            <dependency>
-                <groupId>org.restlet.jse</groupId>
-                <artifactId>org.restlet</artifactId>
-                <version>${restlet-version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.restlet.jse</groupId>
-                <artifactId>org.restlet.ext.jackson</artifactId>
-                <version>${restlet-version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.restlet.jse</groupId>
-                <artifactId>org.restlet.ext.jetty</artifactId>
-                <version>${restlet-version}</version>
-            </dependency>
-
-    </dependencies>
-    <build>
-
-
+  </dependencies>
+  
+  <build>
     <plugins>
-
-
-    <plugin>
-
-    <artifactId>maven-compiler-plugin</artifactId>
-
-    <version>3.2</version>
-
-
-    <configuration>
-
-    <source>1.7</source>
-
-    <target>1.7</target>
-
-</configuration>
-
-</plugin>
-
-
-    <plugin>
-
-    <groupId>org.apache.maven.plugins</groupId>
-
-    <artifactId>maven-shade-plugin</artifactId>
-
-    <version>2.3</version>
-
-
-    <executions>
-
-
-    <execution>
-
-    <phase>package</phase>
-
-
-    <goals>
-
-    <goal>shade</goal>
-
-</goals>
-
-
-    <configuration>
-
-
-    <transformers>
-
-
-    <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-
-
-    <manifestEntries>
-
-    <Main-Class>net.apispark.webapi.WebApiHost</Main-Class>
-
-</manifestEntries>
-
-</transformer>
-
-</transformers>
-
-</configuration>
-
-</execution>
-</executions>
-</plugin>
-</plugins>
-</build>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.2</version>
+        <configuration>
+          <source>1.7</source>
+          <target>1.7</target>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-shade-plugin</artifactId>
+        <version>2.3</version>
+        <executions>
+          <execution>
+            <phase>package</phase>
+            <goals>
+              <goal>shade</goal>
+            </goals>
+            <configuration>
+              <transformers>
+                <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                  <manifestEntries>
+                    <Main-Class>net.apispark.webapi.WebApiHost</Main-Class>
+                  </manifestEntries>
+                </transformer>
+              </transformers>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <configuration>
+          <source>8</source>
+          <target>8</target>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
 </project>

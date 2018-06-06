@@ -3,6 +3,7 @@ package Database.User;
 import Database.SqlContext;
 import Models.User;
 import org.springframework.jdbc.core.SqlParameter;
+import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -74,18 +75,16 @@ public class UserSqlContext extends SqlContext<User> implements IUserContext{
 
     @Override
     public void insert(User entity) {
-
+        throw new NotImplementedException();
     }
 
     @Override
     public void update(User entity) {
-
-
-
+        throw new NotImplementedException();
     }
 
     @Override
-    public Iterable getUserByLevel(int level) {
-        return null;
+    public Iterable getUserByLevel(int level){
+        throw new NotImplementedException();
     }
 }

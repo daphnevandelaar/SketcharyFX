@@ -7,6 +7,8 @@ import Factory.UserFactory;
 import Logic.IUserLogic;
 import Models.DrawEvent;
 import Models.User;
+import Rest.RestClient.Config;
+import Rest.RestClient.clientResource.client.SketcharyGetsketcharyIdClientResource;
 import SketcharyLogic.WhiteboardHandler;
 import com.google.gson.Gson;
 import javafx.application.Platform;
@@ -68,6 +70,13 @@ public class Controller implements Observer {
             lvGameParticipants.getItems().add(u);
         }
 
+        Config config = new Config();
+        config.setBasePath("http://localhost:9001/v1");
+
+        SketcharyGetsketcharyIdClientResource getSketchy = new SketcharyGetsketcharyIdClientResource(config, "1");
+        String sketch = getSketchy.getsasketchary().getSketchary();
+
+        System.out.println(sketch);
 
     }
 
