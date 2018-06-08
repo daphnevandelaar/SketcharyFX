@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
 <?import java.lang.*?>
 <?import javafx.scene.canvas.*?>
 <?import javafx.scene.control.*?>
@@ -32,7 +33,11 @@
             <Button fx:id="btnSend" layoutX="1033.0" layoutY="768.0" mnemonicParsing="false" onAction="#btnSend_OnClick" prefHeight="25.0" prefWidth="74.0" text="Verstuur" />
             <Canvas id="cvWhiteboard" fx:id="cvWhiteboard" height="709.0" layoutX="31.0" layoutY="27.0" onMouseDragged="#cvWhiteboard_OnMouseDrag" width="683.0" />
             <Button fx:id="btnTest" layoutX="56.0" layoutY="768.0" mnemonicParsing="false" onAction="#btnTest_OnClick" text="Gummen" />
-            <Button fx:id="btnSubscribe" layoutX="601.0" layoutY="768.0" mnemonicParsing="false" onAction="#btnSubscribe_OnClick" text="Subscribe" />
+            <Label fx:id="lbTimer" layoutX="765.0" layoutY="113.0" text="60">
+               <font>
+                  <Font size="47.0" />
+               </font>
+            </Label>
             <!--<Button fx:id="btnTest" layoutX="270.0" layoutY="768.0" mnemonicParsing="false" onAction="#btnTest_OnClick" text="Button" />-->
             <!--<Button fx:id="btnTestt" layoutX="200.0" layoutY="768.0" mnemonicParsing="false" onAction="#btnTestt_OnClick" text="enable" />-->
          </children></Pane>

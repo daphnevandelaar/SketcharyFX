@@ -6,8 +6,10 @@ import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Observable;
+import java.util.Observer;
 
-public class UserLogic implements IUserLogic {
+public class UserLogic implements IUserLogic, Observer {
 
     IUserRepository userRepository;
 
@@ -36,5 +38,10 @@ public class UserLogic implements IUserLogic {
     @Override
     public User getRandomUser() {
         return userRepository.getRandomUser();
+    }
+
+    @Override
+    public void update(Observable o, Object arg) {
+
     }
 }

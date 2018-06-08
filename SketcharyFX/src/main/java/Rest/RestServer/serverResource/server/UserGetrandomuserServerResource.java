@@ -1,5 +1,7 @@
 package Rest.RestServer.serverResource.server;
 
+import Database.User.IUserContext;
+import Database.User.UserSqlContext;
 import Factory.UserFactory;
 import Logic.IUserLogic;
 import Rest.RestServer.serverResource.UserGetrandomuserResource;

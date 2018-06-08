@@ -13,11 +13,18 @@ import Models.Game;
 import Models.Sketchary;
 import Models.User;
 import PlayersWebSocket.PlayerSocketClient.Player;
+import PlayersWebSocket.PlayerSocketClient.PlayerMessage;
 import PlayersWebSocket.PlayerSocketClient.PlayerSocketClient;
 import SketcharyLogic.WhiteboardHandler;
 import com.google.gson.Gson;
+import javafx.animation.KeyFrame;
+import javafx.animation.KeyValue;
+import javafx.animation.Timeline;
 import javafx.application.Platform;
+import javafx.beans.property.IntegerProperty;
+import javafx.beans.property.SimpleIntegerProperty;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -25,6 +32,7 @@ import javafx.scene.Scene;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
@@ -35,10 +43,13 @@ import javafx.stage.Modality;
 import javafx.stage.Popup;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+import javafx.util.Duration;
+import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 import java.io.IOException;
 import java.util.Observable;
 import java.util.Observer;
+import java.util.TimerTask;
 
 
 public class Controller implements Observer {
@@ -54,8 +65,12 @@ public class Controller implements Observer {
     @FXML
     private TextField tbUsername;
     @FXML
-            private Button btnTest;
+    private Button btnTest;
+    @FXML
+    private Label lbTimer;
 
+    private Timeline timeline;
+    private IntegerProperty timeSeconds = new SimpleIntegerProperty(60);
 
     WhiteboardHandler whiteboardHandler = new WhiteboardHandler();
     Drawer drawer = null;
@@ -75,15 +90,22 @@ public class Controller implements Observer {
 //        System.out.println("Gekliktttt");
 //    }
 
-    @FXML
-    private void btnTest_OnClick(ActionEvent event){
+    private void startGame(){
+        lbTimer.textProperty().bind(timeSeconds.asString());
+        timeSeconds.set(3);
+        timeline = new Timeline();
+        timeline.getKeyFrames().add(
+                new KeyFrame(Duration.seconds(3+1),
+                        new KeyValue(timeSeconds, 0)));
+        timeline.playFromStart();
 
-        GameLogic gameLogic = new GameLogic();
-        Game game = gameLogic.startGame();
+        timeline.setOnFinished((ActionEvent t) -> {
+            //TODO: implement einde van de game hier
+            throw new NotImplementedException();
+        });
+    }
 
-        System.out.println(game.getSketcher());
-        System.out.println(game.getSketchy());
-
+    private void openSketchy(){
         try{
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/SketchyPopUp.fxml"));
             Parent root1 = (Parent) fxmlLoader.load();
@@ -100,16 +122,28 @@ public class Controller implements Observer {
     }
 
     @FXML
+    private void btnTest_OnClick(ActionEvent event){
+
+        GameLogic gameLogic = new GameLogic();
+        Game game = gameLogic.startGame();
+
+        System.out.println(game.getSketcher());
+        System.out.println(game.getSketchy());
+
+
+    }
+
+    @FXML
     private void btnLogin_OnClick(ActionEvent event){
         // Create the client web socket to communicate with other white boards
         drawer = DrawSocketClient.getInstance();
         drawer.addObserver(this);
 
-//        player = PlayerSocketClient.getIntance();
-//        player.addObserver(this);
-//
-//        player.startConnection();
-//        player.login("Daf");
+        player = PlayerSocketClient.getIntance();
+        player.addObserver(this);
+
+        player.startConnection();
+        player.login("Daf");
 
         // Establish connection with server
         drawer.start();
@@ -127,11 +161,6 @@ public class Controller implements Observer {
             User user = new User("GUEST");
             lvGameParticipants.getItems().add(user);
         }
-    }
-
-    @FXML
-    private void btnSubscribe_OnClick(ActionEvent event){
-        drawer.subscribe("black");
     }
 
     private void drawDot(Color color, double xPos, double yPos) {
@@ -173,16 +202,25 @@ public class Controller implements Observer {
 
     @Override
     public void update(Observable o, Object arg) {
-        System.out.println("Updateee");
         DrawMessage message = (DrawMessage) arg;
+
         String property = message.getProperty();
         String content = message.getContent();
+
         DrawEvent drawEvent = gson.fromJson(content, DrawEvent.class);
+
         requestDrawDot(property, drawEvent);
+    }
+    public void requestAddPlayer(String property, Player player){
+        Platform.runLater(new Runnable() {
+            @Override
+            public void run() {
+                lvGameParticipants.getItems().add(player);
+            }
+        });
     }
 
     public void requestDrawDot(String property, DrawEvent drawEvent){
-        System.out.println("Requestt");
         final Color color = Color.BLACK;
         final double xPos = drawEvent.getXpos();
         final double yPos = drawEvent.getYpos();

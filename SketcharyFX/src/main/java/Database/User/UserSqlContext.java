@@ -1,7 +1,10 @@
 package Database.User;
 
+import Database.Sketchary.ISketcharyContext;
+import Database.Sketchary.SketcharySqlContext;
 import Database.SqlContext;
 import Database.DbRecordReader;
+import Models.Sketchary;
 import Models.User;
 import org.springframework.jdbc.core.SqlParameter;
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
@@ -80,6 +83,13 @@ public class UserSqlContext extends SqlContext<User> implements IUserContext{
         catch(SQLException ex){System.out.println(ex);}
 
         return (User)user;
+    }
+
+    public static void main(String[] args) {
+        IUserContext userSqlContext = new UserSqlContext();
+        User sk = userSqlContext.getRandomUser();
+
+        System.out.println(sk.toString());
     }
 
     @Override
