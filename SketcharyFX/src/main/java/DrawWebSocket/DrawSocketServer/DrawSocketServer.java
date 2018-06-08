@@ -53,7 +53,6 @@ public class DrawSocketServer {
         DrawSocketMessage wbMessage = null;
         try {
             wbMessage = gson.fromJson(jsonMessage, DrawSocketMessage.class);
-            System.out.println("HandleMessageFromClient" + wbMessage);
         }
         catch (JsonSyntaxException ex) {
             System.out.println("[WebSocket ERROR: cannot parse Json message " + jsonMessage);

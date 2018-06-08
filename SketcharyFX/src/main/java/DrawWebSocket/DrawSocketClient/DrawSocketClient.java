@@ -6,19 +6,9 @@ import DrawWebSocket.DrawSocketShared.DrawSocketMessageOperation;
 import com.google.gson.Gson;
 import com.google.gson.JsonSyntaxException;
 
-import java.net.URI;
-import javax.websocket.ClientEndpoint;
-import javax.websocket.CloseReason;
-import javax.websocket.ContainerProvider;
-import javax.websocket.OnClose;
-import javax.websocket.OnError;
-import javax.websocket.OnMessage;
-import javax.websocket.OnOpen;
-import javax.websocket.Session;
-import javax.websocket.WebSocketContainer;
+import javax.websocket.*;
 import java.io.IOException;
-import java.net.URISyntaxException;
-import javax.websocket.DeploymentException;
+import java.net.URI;
 
 @ClientEndpoint
 public class DrawSocketClient extends Drawer {
@@ -57,7 +47,6 @@ public class DrawSocketClient extends Drawer {
     /**
      *  Start the connection.
      */
-    @Override
     public void start() {
         System.out.println("[WebSocket Client start connection]");
         if (!isRunning) {
@@ -66,7 +55,6 @@ public class DrawSocketClient extends Drawer {
         }
     }
 
-    @Override
     public void stop() {
         System.out.println("[WebSocket Client stop]");
         if (isRunning) {
@@ -100,7 +88,6 @@ public class DrawSocketClient extends Drawer {
         session = null;
     }
 
-    @Override
     public void register(String property) {
         DrawSocketMessage message = new DrawSocketMessage();
         message.setOperation(DrawSocketMessageOperation.REGISTERPROPERTY);
@@ -108,7 +95,6 @@ public class DrawSocketClient extends Drawer {
         sendMessageToServer(message);
     }
 
-    @Override
     public void unregister(String property) {
         DrawSocketMessage message = new DrawSocketMessage();
         message.setOperation(DrawSocketMessageOperation.UNREGISTERPROPERTY);
@@ -116,7 +102,6 @@ public class DrawSocketClient extends Drawer {
         sendMessageToServer(message);
     }
 
-    @Override
     public void subscribe(String property) {
         DrawSocketMessage message = new DrawSocketMessage();
         message.setOperation(DrawSocketMessageOperation.SUBSCRIBETOPROPERTY);
@@ -124,7 +109,6 @@ public class DrawSocketClient extends Drawer {
         sendMessageToServer(message);
     }
 
-    @Override
     public void unsubscribe(String property) {
         DrawSocketMessage message = new DrawSocketMessage();
         message.setOperation(DrawSocketMessageOperation.UNSUBSCRIBEFROMPROPERTY);
@@ -132,13 +116,11 @@ public class DrawSocketClient extends Drawer {
         sendMessageToServer(message);
     }
 
-    @Override
     public void update(DrawMessage message) {
         DrawSocketMessage wsMessage = new DrawSocketMessage();
         wsMessage.setOperation(DrawSocketMessageOperation.UPDATEPROPERTY);
         wsMessage.setProperty(message.getProperty());
         wsMessage.setContent(message.getContent());
-        System.out.println("Update with: " + message + "En de websocket message: "+ wsMessage);
         sendMessageToServer(wsMessage);
     }
 
@@ -195,7 +177,7 @@ public class DrawSocketClient extends Drawer {
 
     // Process incoming json message
     private void processMessage(String jsonMessage) {
-        System.out.println("Processing message " + jsonMessage );
+
         // Parse incoming message
         DrawSocketMessage wsMessage;
         try {
@@ -207,7 +189,6 @@ public class DrawSocketClient extends Drawer {
         }
 
         // Only operation update property will be further processed
-        //TODO: Check if this can contain a Sketcher(user) if its not sketcher then dont send msg...
         DrawSocketMessageOperation operation;
         operation = wsMessage.getOperation();
         if (operation == null || operation != DrawSocketMessageOperation.UPDATEPROPERTY) {
