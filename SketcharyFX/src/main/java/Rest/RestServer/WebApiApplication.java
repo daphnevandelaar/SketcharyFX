@@ -18,6 +18,8 @@ public class WebApiApplication extends Application {
      */
     public static final String ROUTE_USERGETALL = "/user/getall";
 
+    public static final String ROUTE_USERGETRANDOMUSER = "/user/getrandomuser";
+
     public static final String ROUTE_USERGETBYUSERNAMEUSERNAME = "/user/getbyusername/{username}";
 
     public static final String ROUTE_USERGETBYIDID = "/user/getbyid/{id}";
@@ -26,6 +28,7 @@ public class WebApiApplication extends Application {
 
     public static final String ROUTE_SKETCHARYGETSKETCHARYID = "/sketchary/getsketchary/{id}";
 
+    public static final String ROUTE_SKETCHARYGETRANDOMSKETCHY = "/sketchary/getrandomsketchy";
 
     /*
      * Define role names
@@ -99,10 +102,12 @@ public class WebApiApplication extends Application {
     public Router createApiRouter() {
         Router apiRouter = new Router(getContext());
         apiRouter.attach(ROUTE_USERGETALL, UserGetallServerResource.class);
+        apiRouter.attach(ROUTE_USERGETRANDOMUSER, UserGetrandomuserServerResource.class);
         apiRouter.attach(ROUTE_USERGETBYUSERNAMEUSERNAME, UserGetbyusernameUsernameServerResource.class);
         apiRouter.attach(ROUTE_USERGETBYIDID, UserGetbyidIdServerResource.class);
         apiRouter.attach(ROUTE_USER, UserServerResource.class);
         apiRouter.attach(ROUTE_SKETCHARYGETSKETCHARYID, SketcharyGetsketcharyIdServerResource.class);
+        apiRouter.attach(ROUTE_SKETCHARYGETRANDOMSKETCHY, SketcharyGetrandomsketchyServerResource.class);
 
         return apiRouter;
 	}

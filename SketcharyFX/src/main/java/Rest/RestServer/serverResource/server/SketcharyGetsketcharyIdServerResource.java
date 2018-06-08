@@ -25,13 +25,16 @@ public class SketcharyGetsketcharyIdServerResource extends AbstractServerResourc
         try {
 	    String idPathVariable = Reference.decode(getAttribute("id"));
 
-	    ISketcharyLogic sketcharyLogic = SketcharyFactory.ManageUsers();
+            Sketchary sketch = new Sketchary();
 
-	    Sketchary sketch = new Sketchary();
-	    Models.Sketchary msketch = sketcharyLogic.getRandomSketchary();
-	    sketch.setSketchary(msketch.getSketchary());
+//	    ISketcharyLogic sketcharyLogic = SketcharyFactory.manageSketchys();
+//	    Models.Sketchary msketch = sketcharyLogic.getRandomSketchary();
+//	    sketch.setSketchary(msketch.getSketchary());
+//	    sketch.setId(Integer.toString(msketch.getId()));
+//
+//	    System.out.println(sketch.getSketchary());
 
-	    System.out.println(sketch.getSketchary());
+            sketch.setSketchary("Verkeerde dit is Sketchy met ID");
 
 	    result = sketch;
 	    

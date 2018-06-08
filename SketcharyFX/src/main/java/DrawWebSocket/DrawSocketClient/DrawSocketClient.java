@@ -207,6 +207,7 @@ public class DrawSocketClient extends Drawer {
         }
 
         // Only operation update property will be further processed
+        //TODO: Check if this can contain a Sketcher(user) if its not sketcher then dont send msg...
         DrawSocketMessageOperation operation;
         operation = wsMessage.getOperation();
         if (operation == null || operation != DrawSocketMessageOperation.UPDATEPROPERTY) {

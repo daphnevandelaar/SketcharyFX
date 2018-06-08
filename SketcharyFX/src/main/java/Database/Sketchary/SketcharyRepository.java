@@ -1,18 +1,21 @@
 package Database.Sketchary;
 
-import Database.IContext;
 import Database.Repository;
 import Models.Sketchary;
 
 public class SketcharyRepository extends Repository<Sketchary> implements ISketcharyRepository {
 
-    ISketcharyContext context;
-    public SketcharyRepository(IContext<Sketchary> context) {
+    private ISketcharyContext sketcharyContext;
+
+    public SketcharyRepository(ISketcharyContext context) {
         super(context);
+        sketcharyContext = context;
     }
 
     @Override
     public Sketchary getRandomSketchary() {
-        return context.getRandomSketchary();
+        //ISketcharyContext cont = new SketcharySqlContext();
+        //return cont.getRandomSketchary();
+        return sketcharyContext.getRandomSketchary();
     }
 }

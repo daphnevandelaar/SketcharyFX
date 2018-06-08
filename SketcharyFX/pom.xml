@@ -21,6 +21,7 @@
   </repositories>
 
   <dependencies>
+
     <dependency>
       <groupId>org.restlet.jse</groupId>
       <artifactId>org.restlet</artifactId>
@@ -74,6 +75,62 @@
       <type>jar</type>
     </dependency>
 
+
+  <dependency>
+    <groupId>org.eclipse.jetty</groupId>
+    <artifactId>jetty-server</artifactId>
+    <version>9.4.7.v20170914</version>
+  </dependency>
+  <dependency>
+    <groupId>org.eclipse.jetty</groupId>
+    <artifactId>jetty-servlet</artifactId>
+    <version>9.4.7.v20170914</version>
+  </dependency>
+
+
+    <!-- Jersey -->
+    <dependency>
+      <groupId>org.glassfish.jersey.core</groupId>
+      <artifactId>jersey-server</artifactId>
+      <version>2.7</version>
+    </dependency>
+    <dependency>
+      <groupId>org.glassfish.jersey.containers</groupId>
+      <artifactId>jersey-container-servlet-core</artifactId>
+      <version>2.7</version>
+    </dependency>
+    <dependency>
+      <groupId>org.glassfish.jersey.containers</groupId>
+      <artifactId>jersey-container-jetty-http</artifactId>
+      <version>2.7</version>
+    </dependency>
+    <dependency>
+      <groupId>org.glassfish.jersey.media</groupId>
+      <artifactId>jersey-media-moxy</artifactId>
+      <version>2.7</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/org.eclipse.jetty/jetty-http -->
+    <dependency>
+      <groupId>org.eclipse.jetty</groupId>
+      <artifactId>jetty-http</artifactId>
+      <version>9.4.10.v20180503</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/org.eclipse.jetty/jetty-util -->
+    <dependency>
+      <groupId>org.eclipse.jetty</groupId>
+      <artifactId>jetty-util</artifactId>
+      <version>9.4.10.v20180503</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/org.eclipse.jetty/jetty-io -->
+    <dependency>
+      <groupId>org.eclipse.jetty</groupId>
+      <artifactId>jetty-io</artifactId>
+      <version>9.4.10.v20180503</version>
+    </dependency>
+
+
+
+
     <!--  Gson: Java to Json conversion -->
     <dependency>
       <groupId>com.google.code.gson</groupId>
@@ -86,6 +143,23 @@
       <artifactId>httpclient</artifactId>
       <version>4.5.3</version>
     </dependency>
+
+    <!--Database postgress to add the connection driver-->
+    <dependency>
+      <groupId>org.postgresql</groupId>
+      <artifactId>postgresql</artifactId>
+      <version>9.4-1203-jdbc4</version>
+    </dependency>
+
+    <!-- UNITTESTS https://mvnrepository.com/artifact/junit/junit -->
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.12</version>
+      <scope>test</scope>
+    </dependency>
+
+
 
   </dependencies>
   

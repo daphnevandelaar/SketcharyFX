@@ -27,4 +27,8 @@ public class Sketchary {
         this.sketchary = sketchary;
     }
 
+    @Override
+    public String toString() {
+        return sketchary;
+    }
 }

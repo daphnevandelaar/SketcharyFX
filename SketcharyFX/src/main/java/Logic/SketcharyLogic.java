@@ -7,7 +7,7 @@ public class SketcharyLogic implements ISketcharyLogic {
 
     ISketcharyRepository sketcharyRepository;
 
-    public SketcharyLogic(ISketcharyRepository sketcharyRepository) { this.sketcharyRepository = this.sketcharyRepository; }
+    public SketcharyLogic(ISketcharyRepository sketcharyRepository) { this.sketcharyRepository = sketcharyRepository; }
 
     @Override
     public Sketchary getRandomSketchary() {

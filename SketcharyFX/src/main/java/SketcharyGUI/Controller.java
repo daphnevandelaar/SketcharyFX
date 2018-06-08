@@ -3,17 +3,25 @@ package SketcharyGUI;
 import DrawWebSocket.DrawSocketClient.DrawMessage;
 import DrawWebSocket.DrawSocketClient.DrawSocketClient;
 import DrawWebSocket.DrawSocketClient.Drawer;
+import Factory.SketcharyFactory;
 import Factory.UserFactory;
+import Logic.GameLogic;
+import Logic.ISketcharyLogic;
 import Logic.IUserLogic;
 import Models.DrawEvent;
+import Models.Game;
+import Models.Sketchary;
 import Models.User;
-import Rest.RestClient.Config;
-import Rest.RestClient.clientResource.client.SketcharyGetsketcharyIdClientResource;
+import PlayersWebSocket.PlayerSocketClient.Player;
+import PlayersWebSocket.PlayerSocketClient.PlayerSocketClient;
 import SketcharyLogic.WhiteboardHandler;
 import com.google.gson.Gson;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.Button;
@@ -23,8 +31,12 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
+import javafx.stage.Modality;
+import javafx.stage.Popup;
+import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
-import java.util.Map;
+import java.io.IOException;
 import java.util.Observable;
 import java.util.Observer;
 
@@ -47,6 +59,8 @@ public class Controller implements Observer {
 
     WhiteboardHandler whiteboardHandler = new WhiteboardHandler();
     Drawer drawer = null;
+    Player player = null;
+
     private String currentProperty = "black";
 
 //    //To change guesser and sketcher
@@ -63,21 +77,26 @@ public class Controller implements Observer {
 
     @FXML
     private void btnTest_OnClick(ActionEvent event){
-        IUserLogic userLogic = UserFactory.ManageUsers();
 
-        for (User u :
-                userLogic.getAllUsers()) {
-            lvGameParticipants.getItems().add(u);
+        GameLogic gameLogic = new GameLogic();
+        Game game = gameLogic.startGame();
+
+        System.out.println(game.getSketcher());
+        System.out.println(game.getSketchy());
+
+        try{
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/SketchyPopUp.fxml"));
+            Parent root1 = (Parent) fxmlLoader.load();
+            Stage stage = new Stage();
+            stage.initModality(Modality.APPLICATION_MODAL);
+            stage.initStyle(StageStyle.UNDECORATED);
+            stage.setTitle("Sketchy");
+            stage.setScene(new Scene(root1));
+            stage.show();
         }
-
-        Config config = new Config();
-        config.setBasePath("http://localhost:9001/v1");
-
-        SketcharyGetsketcharyIdClientResource getSketchy = new SketcharyGetsketcharyIdClientResource(config, "1");
-        String sketch = getSketchy.getsasketchary().getSketchary();
-
-        System.out.println(sketch);
-
+        catch (Exception ex ){
+            System.out.println(ex);
+        }
     }
 
     @FXML
@@ -85,6 +104,12 @@ public class Controller implements Observer {
         // Create the client web socket to communicate with other white boards
         drawer = DrawSocketClient.getInstance();
         drawer.addObserver(this);
+
+//        player = PlayerSocketClient.getIntance();
+//        player.addObserver(this);
+//
+//        player.startConnection();
+//        player.login("Daf");
 
         // Establish connection with server
         drawer.start();

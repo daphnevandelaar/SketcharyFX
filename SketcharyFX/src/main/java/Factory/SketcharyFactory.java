@@ -7,7 +7,5 @@ import Logic.SketcharyLogic;
 
 public class SketcharyFactory {
 
-    public static ISketcharyLogic ManageUsers(){
-        return new SketcharyLogic(new SketcharyRepository(new SketcharySqlContext()));
-    }
+    public static ISketcharyLogic manageSketchys(){ return new SketcharyLogic(new SketcharyRepository(new SketcharySqlContext())); }
 }

@@ -134,25 +134,100 @@
     <ui_properties converted="true" />
     <breakpoint_rules converted="true" />
   </component>
+  <component name="DockManager">
+    <window id="2">
+      <content type="file-editors">
+        <state>
+          <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+            <file leaf-file-name="DrawSocketServer.java" pinned="false" current-in-tab="false">
+              <entry file="file://$PROJECT_DIR$/src/main/java/DrawWebSocket/DrawSocketServer/DrawSocketServer.java">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="492">
+                    <caret line="95" column="77" selection-start-line="95" selection-start-column="66" selection-end-line="95" selection-end-column="77" />
+                  </state>
+                </provider>
+              </entry>
+            </file>
+            <file leaf-file-name="DrawSocketMessageOperation.java" pinned="false" current-in-tab="false">
+              <entry file="file://$PROJECT_DIR$/src/main/java/DrawWebSocket/DrawSocketShared/DrawSocketMessageOperation.java">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="119">
+                    <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
+                  </state>
+                </provider>
+              </entry>
+            </file>
+            <file leaf-file-name="DrawSocketClient.java" pinned="false" current-in-tab="true">
+              <entry file="file://$PROJECT_DIR$/src/main/java/DrawWebSocket/DrawSocketClient/DrawSocketClient.java">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="-590">
+                    <caret line="20" column="41" selection-start-line="20" selection-start-column="41" selection-end-line="20" selection-end-column="41" />
+                  </state>
+                </provider>
+              </entry>
+            </file>
+            <file leaf-file-name="WebSocketContainer.class" pinned="false" current-in-tab="false">
+              <entry file="jar://$MAVEN_REPOSITORY$/javax/websocket/javax.websocket-client-api/1.1/javax.websocket-client-api-1.1.jar!/javax/websocket/WebSocketContainer.class">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="183">
+                    <caret line="16" column="12" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
+                  </state>
+                </provider>
+              </entry>
+            </file>
+          </leaf>
+        </state>
+      </content>
+    </window>
+  </component>
   <component name="FavoritesManager">
     <favorites_list name="JavaFxApplication" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Controller.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="PlayerSocketServer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/PlayersWebSocket/PlayerSocketServer/PlayerSocketServer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="493">
+              <caret line="29" selection-start-line="29" selection-end-line="29" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Game.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Models/Game.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="10" selection-start-line="10" selection-end-line="10" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PlayerSocketClient.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/PlayersWebSocket/PlayerSocketClient/PlayerSocketClient.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="175">
+              <caret line="16" column="51" selection-start-line="16" selection-start-column="47" selection-end-line="16" selection-end-column="51" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#stopConnection#0;class#PlayerSocketClient#0" />
+                <element signature="method#stopClient#0;class#PlayerSocketClient#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Controller.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/SketcharyGUI/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="43" lean-forward="true" selection-start-line="17" selection-start-column="43" selection-end-line="17" selection-end-column="43" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SketcharyGetsketcharyIdServerResource.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Rest/RestServer/serverResource/server/SketcharyGetsketcharyIdServerResource.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="271">
-              <caret line="42" selection-start-line="42" selection-end-line="42" />
+            <state relative-caret-position="442">
+              <caret line="124" column="9" lean-forward="true" selection-start-line="124" selection-start-column="9" selection-end-line="124" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -160,50 +235,16 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SketcharyGetsketcharyIdResource.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Rest/RestServer/serverResource/SketcharyGetsketcharyIdResource.java">
+      <file leaf-file-name="DrawSocketServerStartup.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/DrawWebSocket/DrawSocketServer/DrawSocketServerStartup.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
+            <state relative-caret-position="272">
+              <caret line="23" selection-start-line="23" selection-end-line="23" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#516#517#0" expanded="true" />
+                <element signature="e#554#555#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BindingUtils.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Rest/RestServer/utils/BindingUtils.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PathVariableUtils.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Rest/RestServer/utils/PathVariableUtils.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="QueryParameterUtils.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Rest/RestServer/utils/QueryParameterUtils.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-238">
-              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="WebApiApplication.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Rest/RestServer/WebApiApplication.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="26" column="92" selection-start-line="26" selection-start-column="64" selection-end-line="26" selection-end-column="92" />
             </state>
           </provider>
         </entry>
@@ -211,31 +252,52 @@
       <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="555">
-              <caret line="87" column="17" selection-start-line="87" selection-start-column="17" selection-end-line="87" selection-end-column="17" />
+            <state relative-caret-position="186">
+              <caret line="85" column="42" lean-forward="true" selection-start-line="85" selection-start-column="42" selection-end-line="85" selection-end-column="42" />
+              <folding>
+                <element signature="n#properties#0;n#project#0;n#!!top" />
+                <element signature="n#repositories#0;n#project#0;n#!!top" />
+                <element signature="n#build#0;n#project#0;n#!!top" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WhiteboardHandler.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/SketcharyLogic/WhiteboardHandler.java">
+      <file leaf-file-name="PlayerSocketServerStartup.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/PlayersWebSocket/PlayerSocketServer/PlayerSocketServerStartup.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="22" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
+            <state relative-caret-position="187">
+              <caret line="11" selection-start-line="11" selection-end-line="11" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserSqlContext.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Database/User/UserSqlContext.java">
+      <file leaf-file-name="Player.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/PlayersWebSocket/PlayerSocketClient/Player.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" selection-start-line="2" selection-end-line="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Drawer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/DrawWebSocket/DrawSocketClient/Drawer.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="68">
-              <caret line="4" column="36" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="36" />
-              <folding>
-                <element signature="method#UserSqlParameters#0;class#UserSqlContext#0" />
-                <element signature="method#UsersFromResultSet#0;class#UserSqlContext#0" />
-                <element signature="method#UserFromNextResultSet#0;class#UserSqlContext#0" />
-              </folding>
+              <caret line="4" column="17" selection-start-line="4" selection-end-line="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PlayerSocketOperation.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/PlayersWebSocket/PlayerSocketShared/PlayerSocketOperation.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="11" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
             </state>
           </provider>
         </entry>
@@ -246,9 +308,11 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
+        <option value="FxmlFile" />
+        <option value="JUnit4 Test Class" />
+        <option value="Interface" />
         <option value="Enum" />
         <option value="Class" />
-        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -269,57 +333,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/Factory/UserFactory.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Database/SqlContext.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Database/IContext.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Database/User/UserRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Database/Repository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Models/User.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Rest/webapi/resource/server/AbstractServerResource.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Rest/RestServer/WebApiApplication.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Rest/RestServer/serverResource/server/AbstractServerResource.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Rest/RestServer/serverResource/UserResource.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Rest/RestServer/serverResource/UserGetbyusernameUsernameResource.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Rest/RestServer/serverResource/UserGetallResource.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Rest/RestServer/serverResource/SketcharyGetsketcharyIdResource.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Rest/RestServer/serverResource/server/UserServerResource.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Rest/RestServer/serverResource/server/UserGetbyidIdServerResource.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Rest/RestServer/serverResource/server/UserGetallServerResource.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Rest/Startup.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Rest/RestServer/serverResource/server/UserGetbyusernameUsernameServerResource.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Rest/RestClient/clientResource/UserResource.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Rest/RestClient/clientResource/UserGetbyusernameUsernameResource.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Rest/RestClient/clientResource/SketcharyGetsketcharyIdResource.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Rest/RestClient/clientResource/UserGetallResource.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Database/User/IUserContext.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Models/Sketchary.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Database/Sketchary/ISketcharyContext.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Database/User/UserSqlContext.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Database/Sketchary/SketcharySqlContext.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Database/Sketchary/ISketcharyRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Database/Sketchary/SketcharyRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Logic/ISketcharyLogic.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Logic/UserLogic.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Factory/SketcharyFactory.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Logic/SketcharyLogic.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Rest/RestClient/clientResource/client/SketcharyGetsketcharyIdClientResource.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Rest/RestClient/security/SecurityRuntimeConfigurator.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Rest/RestClient/security/ClientFactory.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Rest/RestClient/security/Security.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Rest/RestClient/security/SecurityConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Rest/RestClient/Config.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Rest/RestClient/clientResource/client/QueryParameterHelper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Rest/RestClient/Sdk.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Rest/RestClient/clientResource/client/UserClientResource.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Rest/RestClient/clientResource/client/UserGetallClientResource.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Rest/RestClient/clientResource/client/UserGetbyidIdClientResource.java" />
         <option value="$PROJECT_DIR$/src/main/java/Rest/RestClient/clientResource/client/UserGetbyusernameUsernameClientResource.java" />
         <option value="$PROJECT_DIR$/src/main/java/Rest/RestClient/security/authenticators/CustomGlobalAuthenticator.java" />
         <option value="$PROJECT_DIR$/src/main/java/Rest/RestClient/security/authenticators/OAuth2ResourceOwnerPasswordFlowAuthenticator.java" />
-        <option value="$PROJECT_DIR$/src/main/java/SketcharyGUI/Controller.java" />
         <option value="$PROJECT_DIR$/src/main/java/Rest/RestServer/WebApiHost.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/Rest/RestClient/clientResource/SketcharyGetrandomsketchyResource.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Rest/RestClient/clientResource/client/SketcharyGetrandomsketchyClientResource.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Rest/RestClient/Sdk.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Database/DbHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Rest/RestServer/serverResource/SketcharyGetrandomsketchyResource.java" />
         <option value="$PROJECT_DIR$/src/main/java/Rest/RestServer/serverResource/server/SketcharyGetsketcharyIdServerResource.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Models/Sketchary.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Rest/shared/Sketchary.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Rest/RestServer/serverResource/server/SketcharyGetrandomsketchyServerResource.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Database/Sketchary/ISketcharyRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Database/Sketchary/ISketcharyContext.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Factory/SketcharyFactory.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Database/Sketchary/SketcharySqlContext.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Database/Sketchary/SketcharyRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/SketchyPopUp.fxml" />
+        <option value="$PROJECT_DIR$/src/main/java/SketcharyGUI/SketchyController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Logic/SketcharyLogic.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Database/User/IUserRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Database/User/IUserContext.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Database/User/UserRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Logic/IUserLogic.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Logic/UserLogic.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Database/dbRecordReader.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Models/User.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Database/DbRecordReader.java" />
+        <option value="$PROJECT_DIR$/src/test/java/Database/DbRecordReaderTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Database/User/UserSqlContext.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Rest/RestServer/serverResource/UserGetrandomuserResource.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Rest/RestServer/serverResource/server/UserGetrandomuserServerResource.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Rest/RestServer/WebApiApplication.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Rest/RestClient/clientResource/UserGetrandomuserResource.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Rest/RestClient/clientResource/client/UserGetrandomuserClientResource.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Rest/shared/ObjectCaster.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Logic/GameLogic.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Logic/IGameLogic.java" />
+        <option value="$PROJECT_DIR$/src/main/java/PlayersWebSocket/PlayerSocketClient/IPlayer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/PlayersWebSocket/PlayerSocketClient/PlayerMessage.java" />
+        <option value="$PROJECT_DIR$/src/main/java/PlayersWebSocket/PlayerSocketShared/PlayerSocketMessage.java" />
+        <option value="$PROJECT_DIR$/src/main/java/DrawWebSocket/DrawSocketClient/DrawSocketClient.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Models/Game.java" />
+        <option value="$PROJECT_DIR$/src/main/java/PlayersWebSocket/PlayerSocketShared/PlayerSocketOperation.java" />
+        <option value="$PROJECT_DIR$/src/main/java/PlayersWebSocket/PlayerSocketServer/PlayerSocketServer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/PlayersWebSocket/PlayerSocketClient/Player.java" />
+        <option value="$PROJECT_DIR$/src/main/java/PlayersWebSocket/PlayerSocketClient/PlayerSocketClient.java" />
+        <option value="$PROJECT_DIR$/src/main/java/PlayersWebSocket/PlayerSocketServer/PlayerSocketServerStartup.java" />
+        <option value="$PROJECT_DIR$/src/main/java/SketcharyGUI/Controller.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>
@@ -340,7 +404,7 @@
     <packageJsonPaths />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1936" />
@@ -354,6 +418,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -385,7 +451,59 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="Rest" type="462c0819:PsiDirectoryNode" />
+              <item name="DrawWebSocket" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SketcharyFX" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SketcharyFX" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="DrawWebSocket" type="462c0819:PsiDirectoryNode" />
+              <item name="DrawSocketServer" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SketcharyFX" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SketcharyFX" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="Models" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SketcharyFX" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SketcharyFX" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="PlayersWebSocket" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SketcharyFX" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SketcharyFX" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="PlayersWebSocket" type="462c0819:PsiDirectoryNode" />
+              <item name="PlayerSocketClient" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SketcharyFX" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SketcharyFX" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="PlayersWebSocket" type="462c0819:PsiDirectoryNode" />
+              <item name="PlayerSocketServer" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SketcharyFX" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SketcharyFX" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="PlayersWebSocket" type="462c0819:PsiDirectoryNode" />
+              <item name="PlayerSocketShared" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SketcharyFX" type="b2602c69:ProjectViewProjectNode" />
@@ -394,37 +512,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="Rest" type="462c0819:PsiDirectoryNode" />
-              <item name="RestClient" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SketcharyFX" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SketcharyFX" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="Rest" type="462c0819:PsiDirectoryNode" />
-              <item name="RestServer" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SketcharyFX" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SketcharyFX" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="Rest" type="462c0819:PsiDirectoryNode" />
-              <item name="RestServer" type="462c0819:PsiDirectoryNode" />
-              <item name="serverResource" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SketcharyFX" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SketcharyFX" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="Rest" type="462c0819:PsiDirectoryNode" />
-              <item name="RestServer" type="462c0819:PsiDirectoryNode" />
-              <item name="serverResource" type="462c0819:PsiDirectoryNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SketcharyFX" type="b2602c69:ProjectViewProjectNode" />
@@ -446,8 +533,6 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -461,8 +546,10 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="PostgreSQL" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="dynamic.classpath" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../Rest api big idea/server" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/Sketchary-master-76d86db61d6f1c9fe0b08ed618dfa7883908f421/SketcharyFX" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -471,18 +558,31 @@
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.excludes" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="Logic" />
-      <recent name="Database.User" />
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="Database" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Semester 3\Big Idea Sketchary\SketcharyFX\SketcharyFX\SketcharyFX" />
-      <recent name="D:\Semester 3\Big Idea Sketchary\SketcharyFX\SketcharyFX\SketcharyFX\src\main\java\Rest\RestClient" />
-      <recent name="D:\Semester 3\Big Idea Sketchary\SketcharyFX\SketcharyFX\SketcharyFX\src\main\java\Rest\RestServer" />
-      <recent name="D:\Semester 3\Big Idea Sketchary\SketcharyFX\SketcharyFX\SketcharyFX\src\main\java\Rest" />
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="Q:\Semester 3\Projects Java\javafx sketchary\SketcharyFX\src\main\resources" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Semester 3\Big Idea Sketchary\SketcharyFX\SketcharyFX\SketcharyFX\src\main\java\Rest\RestClient\clientResource\client" />
+      <recent name="D:\Semester 3\Big Idea Sketchary\SketcharyFX\SketcharyFX\SketcharyFX\src\main\java\Rest\RestClient\clientResource" />
+      <recent name="D:\Semester 3\Big Idea Sketchary\SketcharyFX\SketcharyFX\SketcharyFX" />
+      <recent name="D:\Semester 3\Big Idea Sketchary\SketcharyFX\SketcharyFX\SketcharyFX\src\main\java\Rest\RestClient" />
+      <recent name="D:\Semester 3\Big Idea Sketchary\SketcharyFX\SketcharyFX\SketcharyFX\src\main\java\Rest\RestServer" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="Rest.RestServer.serverResource.server" />
+      <recent name="Rest.RestServer.serverResource" />
+      <recent name="Rest.RestClient.clientResource.client" />
+      <recent name="Rest.RestClient.clientResource" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="Logic" />
+      <recent name="Database.User" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -497,20 +597,9 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.WebApiHost">
+  <component name="RunManager" selected="Application.DrawSocketServerStartup (1)">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-    </configuration>
-    <configuration name="DbHandler" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Database.DbHandler" />
-      <module name="SketcharyFX" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Database.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
     </configuration>
     <configuration name="DrawSocketServerStartup (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="DrawWebSocket.DrawSocketServer.DrawSocketServerStartup" />
@@ -536,13 +625,13 @@
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
     </configuration>
-    <configuration name="Startup" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Rest.Startup" />
+    <configuration name="PlayerSocketServerStartup" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="PlayersWebSocket.PlayerSocketServer.PlayerSocketServerStartup" />
       <module name="SketcharyFX" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Rest.*" />
+          <option name="PATTERN" value="PlayersWebSocket.PlayerSocketServer.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -560,6 +649,52 @@
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    </configuration>
+    <configuration name="DbRecordReaderTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SketcharyFX" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Database.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="Database" />
+      <option name="MAIN_CLASS_NAME" value="Database.DbRecordReaderTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="DbRecordReaderTest.defineUserFromDbRecord" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SketcharyFX" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Database.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="Database" />
+      <option name="MAIN_CLASS_NAME" value="Database.DbRecordReaderTest" />
+      <option name="METHOD_NAME" value="defineUserFromDbRecord" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <patterns />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -620,16 +755,18 @@
     <list>
       <item itemvalue="Application.Main" />
       <item itemvalue="Application.DrawSocketServerStartup (1)" />
-      <item itemvalue="Application.DbHandler" />
       <item itemvalue="Application.WebApiHost" />
-      <item itemvalue="Application.Startup" />
+      <item itemvalue="JUnit.DbRecordReaderTest.defineUserFromDbRecord" />
+      <item itemvalue="JUnit.DbRecordReaderTest" />
+      <item itemvalue="Application.PlayerSocketServerStartup" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.WebApiHost" />
-        <item itemvalue="Application.Startup" />
-        <item itemvalue="Application.DbHandler" />
         <item itemvalue="Application.DrawSocketServerStartup (1)" />
+        <item itemvalue="Application.PlayerSocketServerStartup" />
+        <item itemvalue="Application.WebApiHost" />
+        <item itemvalue="JUnit.DbRecordReaderTest" />
+        <item itemvalue="JUnit.DbRecordReaderTest.defineUserFromDbRecord" />
       </list>
     </recent_temporary>
   </component>
@@ -652,15 +789,46 @@
       <workItem from="1527709203406" duration="2550000" />
       <workItem from="1527852960339" duration="422000" />
       <workItem from="1527856021155" duration="131000" />
-      <workItem from="1528263383050" duration="30597000" />
+      <workItem from="1528263383050" duration="46685000" />
+      <workItem from="1528436420445" duration="16566000" />
+      <workItem from="1528460115000" duration="1271000" />
     </task>
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="DbRecordReaderTest_defineUserFromDbRecord - 2018.06.08 at 09h 10m 14s.xml">
+      <configuration name="DbRecordReaderTest.defineUserFromDbRecord" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DbRecordReaderTest_defineUserFromDbRecord - 2018.06.08 at 09h 10m 25s.xml">
+      <configuration name="DbRecordReaderTest.defineUserFromDbRecord" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DbRecordReaderTest - 2018.06.08 at 09h 12m 02s.xml">
+      <configuration name="DbRecordReaderTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DbRecordReaderTest - 2018.06.08 at 09h 12m 12s.xml">
+      <configuration name="DbRecordReaderTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DbRecordReaderTest - 2018.06.08 at 09h 12m 16s.xml">
+      <configuration name="DbRecordReaderTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DbRecordReaderTest - 2018.06.08 at 09h 14m 14s.xml">
+      <configuration name="DbRecordReaderTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DbRecordReaderTest - 2018.06.08 at 09h 15m 43s.xml">
+      <configuration name="DbRecordReaderTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DbRecordReaderTest - 2018.06.08 at 09h 15m 47s.xml">
+      <configuration name="DbRecordReaderTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DbRecordReaderTest - 2018.06.08 at 09h 20m 18s.xml">
+      <configuration name="DbRecordReaderTest" configurationId="JUnit" />
+    </history-entry>
+  </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53213000" />
+    <option name="totallyTimeSpent" value="87138000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
@@ -670,7 +838,6 @@
       <window_info anchor="right" id="CDI" order="4" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info anchor="bottom" id="Inspection Results" weight="0.32943678" />
       <window_info anchor="right" id="Database" order="3" weight="0.054166667" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="JSF" order="4" />
@@ -678,32 +845,33 @@
       <window_info id="UI Designer" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3995749" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="7" weight="0.32306057" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.32199788" />
       <window_info anchor="right" id="Palette&#9;" order="4" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="bottom" id="Java Enterprise" order="8" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.39001063" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.39001063" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Spring" />
+      <window_info anchor="bottom" id="Spring" order="8" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.21302083" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.21302083" />
       <window_info anchor="right" id="Bean Validation" order="4" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32943678" />
       <window_info id="Learn" order="2" />
       <window_info anchor="right" id="Theme Preview" order="4" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Inspection Results" order="8" weight="0.32943678" />
       <window_info anchor="bottom" id="Changes" order="7" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="SonarLint" order="7" />
       <window_info anchor="right" id="JetGradle" order="3" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Problems" order="7" />
       <window_info anchor="bottom" id="Profiler" order="7" />
       <window_info anchor="bottom" id="Application Servers" order="7" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32943678" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Problems" order="7" />
     </layout>
     <layout-to-restore>
       <window_info anchor="bottom" id="Application Servers" order="8" />
@@ -761,15 +929,15 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/Database/Repository.java</url>
-          <line>19</line>
-          <properties class="Database.Repository" method="getAll">
+          <url>file://$PROJECT_DIR$/src/main/java/Database/DbRecordReader.java</url>
+          <line>6</line>
+          <properties class="Database.DbRecordReader" method="defineUserFromDbRecord">
             <option name="EMULATED" value="true" />
           </properties>
-          <option name="timeStamp" value="11" />
+          <option name="timeStamp" value="21" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="13" />
+      <option name="time" value="23" />
     </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
@@ -777,323 +945,17 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/Database/User/IUserContext.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/DrawWebSocket/DrawSocketClient/DrawSocketClient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="6" column="45" selection-start-line="6" selection-start-column="45" selection-end-line="6" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Database/Sketchary/SketcharySqlContext.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="43" lean-forward="true" selection-start-line="24" selection-start-column="43" selection-end-line="24" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#318#319#0" expanded="true" />
-            <element signature="e#345#346#0" expanded="true" />
-            <element signature="e#498#499#0" expanded="true" />
-            <element signature="e#549#550#0" expanded="true" />
-            <element signature="e#539#540#0" expanded="true" />
-            <element signature="e#589#590#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Database/Sketchary/ISketcharyContext.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="23" lean-forward="true" selection-start-line="6" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Database/User/UserRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Database/Sketchary/SketcharyRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="5" lean-forward="true" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#266#267#0" expanded="true" />
-            <element signature="e#296#297#0" expanded="true" />
-            <element signature="e#391#392#0" expanded="true" />
-            <element signature="e#442#443#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Factory/UserFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Database/User/IUserRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+        <state relative-caret-position="3247">
+          <caret line="214" column="19" selection-start-line="214" selection-start-column="19" selection-end-line="214" selection-end-column="19" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Database/Sketchary/ISketcharyRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="42" selection-start-line="6" selection-start-column="42" selection-end-line="6" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Logic/IUserLogic.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Logic/ISketcharyLogic.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Logic/SketcharyLogic.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#294#295#0" expanded="true" />
-            <element signature="e#351#352#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Factory/SketcharyFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Models/Sketchary.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="34" selection-start-line="6" selection-start-column="34" selection-end-line="6" selection-end-column="34" />
-          <folding>
-            <element signature="e#158#159#0" expanded="true" />
-            <element signature="e#208#209#0" expanded="true" />
-            <element signature="e#250#251#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Rest/shared/Sketchary.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Rest/RestClient/security/ssl/ClientSslContextFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-807">
-          <caret line="24" column="32" lean-forward="true" selection-start-line="24" selection-start-column="32" selection-end-line="24" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Rest/RestClient/security/AuthenticatorNotFoundException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Rest/RestClient/clientResource/client/QueryParameterHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="402">
-          <caret line="51" column="81" selection-start-line="51" selection-start-column="81" selection-end-line="51" selection-end-column="81" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Rest/RestClient/clientResource/client/UserClientResource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="36" column="54" lean-forward="true" selection-start-line="36" selection-start-column="54" selection-end-line="36" selection-end-column="54" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Rest/RestClient/clientResource/client/UserGetallClientResource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="436">
-          <caret line="31" column="15" selection-start-line="31" selection-start-column="15" selection-end-line="31" selection-end-column="15" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Rest/RestClient/clientResource/client/UserGetbyidIdClientResource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="39" column="68" selection-start-line="39" selection-start-column="68" selection-end-line="39" selection-end-column="68" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Rest/RestClient/clientResource/client/UserGetbyusernameUsernameClientResource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="37" column="49" selection-start-line="37" selection-start-column="49" selection-end-line="37" selection-end-column="49" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Rest/RestClient/security/authenticators/CustomGlobalAuthenticator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="3" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Rest/RestClient/security/authenticators/OAuth2ResourceOwnerPasswordFlowAuthenticator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2194">
-          <caret line="106" column="40" selection-start-line="106" selection-start-column="40" selection-end-line="106" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Rest/RestClient/clientResource/SketcharyGetsketcharyIdResource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="23" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Rest/RestClient/clientResource/client/SketcharyGetsketcharyIdClientResource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="24" column="48" selection-start-line="24" selection-start-column="11" selection-end-line="24" selection-end-column="48" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Database/DbHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="24" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Rest/RestClient/Config.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="37" column="37" selection-start-line="37" selection-start-column="37" selection-end-line="37" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Rest/RestClient/Sdk.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="24" column="5" lean-forward="true" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Rest/RestClient/clientResource/UserResource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="28" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Rest/RestClient/security/ClientFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="515">
-          <caret line="65" column="58" selection-start-line="65" selection-start-column="58" selection-end-line="65" selection-end-column="58" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Rest/RestClient/security/Security.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="76" column="94" selection-start-line="76" selection-start-column="94" selection-end-line="76" selection-end-column="94" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Rest/RestClient/security/SecurityRuntimeConfigurator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="13" column="11" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Rest/RestClient/security/SecurityConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Rest/RestClient/clientResource/UserGetbyusernameUsernameResource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="28" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Rest/Startup.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="18" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Rest/RestServer/serverResource/server/UserGetallServerResource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="24" column="8" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="85">
+          <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
         </state>
       </provider>
     </entry>
@@ -1104,119 +966,401 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Rest/RestServer/WebApiHost.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/SketcharyGUI/SketchyController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="12" column="46" selection-start-line="12" selection-start-column="46" selection-end-line="12" selection-end-column="46" />
+        <state relative-caret-position="340">
+          <caret line="20" column="9" lean-forward="true" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_161/src.zip!/java/util/function/Consumer.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Logic/SketcharyLogic.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
-          <caret line="48" column="9" selection-start-line="48" selection-start-column="9" selection-end-line="48" selection-end-column="9" />
+          <caret line="12" column="43" selection-start-line="12" selection-start-column="43" selection-end-line="12" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#443#444#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Database/User/IUserRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="25" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Logic/IUserLogic.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="11" column="25" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Logic/UserLogic.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="22" column="21" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
+        <state relative-caret-position="492">
+          <caret line="37" column="15" selection-start-line="37" selection-start-column="15" selection-end-line="37" selection-end-column="15" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#620#621#0" expanded="true" />
             <element signature="e#671#672#0" expanded="true" />
             <element signature="e#736#737#0" expanded="true" />
             <element signature="e#787#788#0" expanded="true" />
+            <element signature="e#836#837#0" expanded="true" />
+            <element signature="e#863#864#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/DrawWebSocket/DrawSocketServer/DrawSocketServerStartup.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="46" selection-start-line="7" selection-start-column="46" selection-end-line="7" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/SketcharyLogic/WhiteboardHandler.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Database/User/IUserContext.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
-          <caret line="6" column="22" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
+          <caret line="7" column="25" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Database/Sketchary/SketcharySqlContext.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="26" selection-start-line="13" selection-start-column="8" selection-end-line="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Factory/SketcharyFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="9" column="48" selection-start-line="9" selection-start-column="48" selection-end-line="9" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/runner/notification/Failure.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/internal/runners/model/EachTestNotifier.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="30" selection-start-line="30" selection-end-line="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/runners/ParentRunner.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="208" selection-start-line="208" selection-end-line="208" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Models/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="257">
+          <caret line="45" selection-start-line="45" selection-end-line="45" />
+          <folding>
+            <element signature="e#613#614#0" expanded="true" />
+            <element signature="e#653#654#0" expanded="true" />
+            <element signature="e#692#693#0" expanded="true" />
+            <element signature="e#773#774#0" expanded="true" />
+            <element signature="e#815#816#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Database/DbRecordReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="73" selection-start-line="22" selection-start-column="73" selection-end-line="22" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/internal/runners/model/ReflectiveCallable.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/Database/DbRecordReaderTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="19" column="5" lean-forward="true" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Rest/RestServer/serverResource/UserGetrandomuserResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="38" selection-start-line="8" selection-start-column="38" selection-end-line="8" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Rest/RestServer/serverResource/server/SketcharyGetrandomsketchyServerResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="423">
+          <caret line="28" column="58" lean-forward="true" selection-start-line="28" selection-start-column="58" selection-end-line="28" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Rest/RestServer/serverResource/server/UserGetrandomuserServerResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="57" selection-start-line="26" selection-start-column="57" selection-end-line="26" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Database/User/UserRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="21" column="42" selection-start-line="21" selection-start-column="42" selection-end-line="21" selection-end-column="42" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Database/User/UserSqlContext.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="36" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="36" />
-          <folding>
-            <element signature="method#UserSqlParameters#0;class#UserSqlContext#0" />
-            <element signature="method#UsersFromResultSet#0;class#UserSqlContext#0" />
-            <element signature="method#UserFromNextResultSet#0;class#UserSqlContext#0" />
-          </folding>
+        <state relative-caret-position="714">
+          <caret line="111" lean-forward="true" selection-start-line="111" selection-end-line="111" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Rest/RestClient/clientResource/UserGetrandomuserResource.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="87" column="17" selection-start-line="87" selection-start-column="17" selection-end-line="87" selection-end-column="17" />
+        <state relative-caret-position="153">
+          <caret line="9" column="23" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/SketcharyGUI/Controller.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Rest/RestClient/clientResource/client/UserGetrandomuserClientResource.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="43" lean-forward="true" selection-start-line="17" selection-start-column="43" selection-end-line="17" selection-end-column="43" />
+        <state relative-caret-position="272">
+          <caret line="27" column="7" lean-forward="true" selection-start-line="27" selection-start-column="7" selection-end-line="27" selection-end-column="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Rest/RestServer/serverResource/SketcharyGetsketcharyIdResource.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Rest/RestServer/WebApiHost.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
-          <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
+          <caret line="9" column="57" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Rest/RestServer/WebApiApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="104" column="89" lean-forward="true" selection-start-line="104" selection-start-column="89" selection-end-line="104" selection-end-column="89" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Rest/RestClient/Config.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="515">
+          <caret line="37" column="37" selection-start-line="37" selection-start-column="37" selection-end-line="37" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Rest/shared/ObjectCaster.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Logic/IGameLogic.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="21" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Logic/GameLogic.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="271">
+          <caret line="17" column="29" lean-forward="true" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Rest/RestServer/utils/BindingUtils.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/DrawWebSocket/DrawSocketClient/IDrawer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="7" lean-forward="true" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/PlayersWebSocket/PlayerSocketClient/IPlayer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="26" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/DrawWebSocket/DrawSocketClient/DrawMessage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="23" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Rest/RestServer/utils/PathVariableUtils.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/PlayersWebSocket/PlayerSocketClient/PlayerMessage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="18" column="35" lean-forward="true" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
+          <folding>
+            <element signature="e#371#372#0" expanded="true" />
+            <element signature="e#413#414#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/DrawWebSocket/DrawSocketShared/DrawSocketMessage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="34" column="5" lean-forward="true" selection-start-line="4" selection-start-column="4" selection-end-line="34" selection-end-column="5" />
+          <folding>
+            <element signature="e#420#421#0" expanded="true" />
+            <element signature="e#462#463#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/PlayersWebSocket/PlayerSocketShared/PlayerSocketMessage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="21" column="5" lean-forward="true" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
+          <folding>
+            <element signature="e#377#378#0" expanded="true" />
+            <element signature="e#419#420#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/DrawWebSocket/DrawSocketShared/DrawSocketMessageOperation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Models/Game.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/PlayersWebSocket/PlayerSocketShared/PlayerSocketOperation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="11" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/DrawWebSocket/DrawSocketServer/DrawSocketServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="492">
+          <caret line="95" column="77" selection-start-line="95" selection-start-column="66" selection-end-line="95" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/PlayersWebSocket/PlayerSocketClient/Player.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/DrawWebSocket/DrawSocketClient/Drawer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <caret line="4" column="17" selection-start-line="4" selection-end-line="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Rest/RestServer/utils/QueryParameterUtils.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/DrawWebSocket/DrawSocketServer/DrawSocketServerStartup.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-238">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        <state relative-caret-position="272">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#516#517#0" expanded="true" />
+            <element signature="e#554#555#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Rest/RestServer/WebApiApplication.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/javax/websocket/javax.websocket-client-api/1.1/javax.websocket-client-api-1.1.jar!/javax/websocket/WebSocketContainer.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="16" column="12" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/PlayersWebSocket/PlayerSocketClient/PlayerSocketClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="16" column="51" selection-start-line="16" selection-start-column="47" selection-end-line="16" selection-end-column="51" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#stopConnection#0;class#PlayerSocketClient#0" />
+            <element signature="method#stopClient#0;class#PlayerSocketClient#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/PlayersWebSocket/PlayerSocketServer/PlayerSocketServerStartup.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
-          <caret line="26" column="92" selection-start-line="26" selection-start-column="64" selection-end-line="26" selection-end-column="92" />
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Rest/RestServer/serverResource/server/SketcharyGetsketcharyIdServerResource.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/PlayersWebSocket/PlayerSocketServer/PlayerSocketServer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
-          <caret line="42" selection-start-line="42" selection-end-line="42" />
+        <state relative-caret-position="493">
+          <caret line="29" selection-start-line="29" selection-end-line="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/DrawWebSocket/DrawSocketClient/DrawSocketClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-590">
+          <caret line="20" column="41" selection-start-line="20" selection-start-column="41" selection-end-line="20" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="85" column="42" lean-forward="true" selection-start-line="85" selection-start-column="42" selection-end-line="85" selection-end-column="42" />
+          <folding>
+            <element signature="n#properties#0;n#project#0;n#!!top" />
+            <element signature="n#repositories#0;n#project#0;n#!!top" />
+            <element signature="n#build#0;n#project#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/SketcharyGUI/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="124" column="9" lean-forward="true" selection-start-line="124" selection-start-column="9" selection-end-line="124" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

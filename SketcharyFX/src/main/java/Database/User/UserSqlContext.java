@@ -1,6 +1,7 @@
 package Database.User;
 
 import Database.SqlContext;
+import Database.DbRecordReader;
 import Models.User;
 import org.springframework.jdbc.core.SqlParameter;
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
@@ -48,6 +49,23 @@ public class UserSqlContext extends SqlContext<User> implements IUserContext{
 
         return users;
     }
+
+    private User UserFromFunc(ResultSet rs){
+        User user = new User();
+
+        try{
+            while (rs.next()){
+                String record = rs.getString(1);
+                user = DbRecordReader.defineUserFromDbRecord(record);
+            }
+
+        }
+        catch(SQLException ex){System.out.println(ex);}
+
+
+        return user;
+    }
+
     private User UserFromNextResultSet(ResultSet rs){
 
         Models.User user =  new Models.User();
@@ -86,5 +104,12 @@ public class UserSqlContext extends SqlContext<User> implements IUserContext{
     @Override
     public Iterable getUserByLevel(int level){
         throw new NotImplementedException();
+    }
+
+    @Override
+    public User getRandomUser() {
+        String query = "SELECT public.\"funcGetRandomUser\"();";
+
+        return UserFromFunc(getDataByView(query));
     }
 }

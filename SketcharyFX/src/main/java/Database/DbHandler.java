@@ -25,8 +25,13 @@ public class DbHandler {
         catch (InstantiationException ex) {System.err.println(ex.getMessage());}
         catch (SQLException ex)           {System.err.println(ex.getMessage());}
         finally {
-            try { conn.close(); }
-            catch (SQLException sqlEx) {System.err.println(sqlEx.getErrorCode()); }
+            try {
+                //conn.close();
+            }
+            catch (Exception sqlEx) {
+                //System.err.println(sqlEx.getErrorCode());
+                System.err.println(sqlEx.getMessage());
+            }
         }
 
         return rs;

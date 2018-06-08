@@ -36,4 +36,7 @@ public class Sdk {
         return new SketcharyGetsketcharyIdClientResource(config, id);
     }
 
+    public SketcharyGetrandomsketchyClientResource sketcharyGetrandomsketchy() {
+        return new SketcharyGetrandomsketchyClientResource(config);
+    }
 }

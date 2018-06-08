@@ -7,6 +7,13 @@ public class User {
     private int level = 1;
     private int expPoints = 0;
 
+    public User(int id, String username, String password, int level, int expPoints) {
+        this.id = id;
+        this.username = username;
+        this.password = password;
+        this.level = level;
+        this.expPoints = expPoints;
+    }
 
     public int getId() {
         return id;

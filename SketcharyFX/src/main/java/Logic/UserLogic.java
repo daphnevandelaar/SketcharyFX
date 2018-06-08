@@ -32,4 +32,9 @@ public class UserLogic implements IUserLogic {
     public List<User> getUserByLevel(int level) {
         throw new NotImplementedException();
     }
+
+    @Override
+    public User getRandomUser() {
+        return userRepository.getRandomUser();
+    }
 }
