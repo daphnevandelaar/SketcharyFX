@@ -1,0 +1,9 @@
+
+gsquid:S1192J"PUse already-defined constant 'ROLE_ADMIN' instead of duplicating its value here.(ö×¶†
+Esquid:S1068."/Remove this unused "versionFull" private field.(ÂÀßZ
+Lsquid:S10680"0Remove this unused "versionMajor" private field.(Ò‚ŒŸÿÿÿÿÿ
+Lsquid:S10682"0Remove this unused "versionMicro" private field.(–Ôƒòøÿÿÿÿ
+Gsquid:S10684"0Remove this unused "versionMinor" private field.(öÄÐŠ
+ysquid:S1488x"]Immediately return this expression instead of assigning it to the temporary variable "guard".(Ž–ªéûÿÿÿÿ
+rsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Îœä¹
+Vsquid:S1161s":Add the "@Override" annotation above this method signature(àÉÛÔüÿÿÿÿ

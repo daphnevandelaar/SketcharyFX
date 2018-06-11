@@ -1,0 +1,18 @@
+
+usquid:S37760"RRefactor this method to reduce its Cognitive Complexity from 28 to the 15 allowed.(éıß×üÿÿÿÿ8Ñ×õõ¾,
+V
+squid:S106-"9Replace this use of System.out or System.err by a logger.(ŒÅ³ù8Ñ×õõ¾,
+[
+squid:S106c"9Replace this use of System.out or System.err by a logger.(øºƒ¸ùÿÿÿÿ8Ñ×õõ¾,
+xsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ÔèûI8Ñ×õõ¾,
+[
+squid:S1067"9Replace this use of System.out or System.err by a logger.(‰şµÎøÿÿÿÿ8Ñ×õõ¾,
+Msquid:S1066Y"/Merge this if statement with the enclosing one.(Ô†¿‰8Ñ×õõ¾,
+W"squid:SwitchLastCaseIsDefaultCheckD""Add a default case to this switch.(ìè²ë8Ñ×õõ¾,
+V
+squid:S106I"9Replace this use of System.out or System.err by a logger.(î±Š 8Ñ×õõ¾,
+qsquid:S3824G"NReplace this "Map.get()" and condition with a call to "Map.computeIfAbsent()".(àâ†”øÿÿÿÿ8Ñ×õõ¾,
+V
+squid:S106"9Replace this use of System.out or System.err by a logger.(ö¥û©8Ñ×õõ¾,
+[
+squid:S106T"9Replace this use of System.out or System.err by a logger.(ŞìúÁúÿÿÿÿ8Ñ×õõ¾,
