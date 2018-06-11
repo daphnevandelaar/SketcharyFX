@@ -1,21 +1,20 @@
 package SketcharyGUI;
 
+import ChatWebSocket.ChatSocketClient.ChatMessage;
+import ChatWebSocket.ChatSocketClient.ChatSocketClient;
+import ChatWebSocket.ChatSocketClient.Chatter;
 import DrawWebSocket.DrawSocketClient.DrawMessage;
 import DrawWebSocket.DrawSocketClient.DrawSocketClient;
 import DrawWebSocket.DrawSocketClient.Drawer;
-import Factory.SketcharyFactory;
-import Factory.UserFactory;
 import Logic.GameLogic;
-import Logic.ISketcharyLogic;
-import Logic.IUserLogic;
 import Models.DrawEvent;
 import Models.Game;
-import Models.Sketchary;
 import Models.User;
 import PlayersWebSocket.PlayerSocketClient.Player;
-import PlayersWebSocket.PlayerSocketClient.PlayerMessage;
 import PlayersWebSocket.PlayerSocketClient.PlayerSocketClient;
 import SketcharyLogic.WhiteboardHandler;
+import Sockets.SocketMessage;
+import Sockets.SocketMessageIdentifier;
 import com.google.gson.Gson;
 import javafx.animation.KeyFrame;
 import javafx.animation.KeyValue;
@@ -24,7 +23,6 @@ import javafx.application.Platform;
 import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -40,16 +38,13 @@ import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 import javafx.stage.Modality;
-import javafx.stage.Popup;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import javafx.util.Duration;
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
-import java.io.IOException;
 import java.util.Observable;
 import java.util.Observer;
-import java.util.TimerTask;
 
 
 public class Controller implements Observer {
@@ -68,13 +63,21 @@ public class Controller implements Observer {
     private Button btnTest;
     @FXML
     private Label lbTimer;
+    @FXML
+    private Label lbUser;
 
     private Timeline timeline;
     private IntegerProperty timeSeconds = new SimpleIntegerProperty(60);
+    private User user;
 
     WhiteboardHandler whiteboardHandler = new WhiteboardHandler();
     Drawer drawer = null;
     Player player = null;
+    Chatter chatter = null;
+
+    public Controller(User user){
+        this.user = user;
+    }
 
     private String currentProperty = "black";
 
@@ -124,12 +127,12 @@ public class Controller implements Observer {
     @FXML
     private void btnTest_OnClick(ActionEvent event){
 
-        GameLogic gameLogic = new GameLogic();
-        Game game = gameLogic.startGame();
-
-        System.out.println(game.getSketcher());
-        System.out.println(game.getSketchy());
-
+//        GameLogic gameLogic = new GameLogic();
+//        Game game = gameLogic.startGame();
+//
+//        System.out.println(game.getSketcher());
+//        System.out.println(game.getSketchy());
+        lbUser.setText(user.getUsername());
 
     }
 
@@ -139,11 +142,12 @@ public class Controller implements Observer {
         drawer = DrawSocketClient.getInstance();
         drawer.addObserver(this);
 
-        player = PlayerSocketClient.getIntance();
-        player.addObserver(this);
-
-        player.startConnection();
-        player.login("Daf");
+//        chatter = ChatSocketClient.getInstance();
+//        chatter.addObserver(this);
+//
+//        chatter.start();
+//        chatter.register(user.getUsername(), "game");
+//        chatter.subscribe(user.getUsername(), "game");
 
         // Establish connection with server
         drawer.start();
@@ -175,8 +179,17 @@ public class Controller implements Observer {
 
     @FXML
     private void btnSend_OnClick(ActionEvent event){
-        vboxChat.getChildren().add(new Text(tbMessage.getText()));
-        tbMessage.setText("");
+
+        broadcastCreatedMessage(tbUsername.getText(), "game", tbMessage.getText());
+    }
+
+    public void broadcastCreatedMessage(String userProperty, String eventProperty, String content){
+        ChatMessage message = new ChatMessage();
+        message.setEventProperty(eventProperty);
+        message.setUserProperty(userProperty);
+        message.setContent(content);
+        message.setIdentifier(SocketMessageIdentifier.CHATMESSAGE);
+        chatter.update(message);
     }
 
     @FXML
@@ -202,15 +215,36 @@ public class Controller implements Observer {
 
     @Override
     public void update(Observable o, Object arg) {
-        DrawMessage message = (DrawMessage) arg;
+        SocketMessage message = (SocketMessage) arg;
+        SocketMessageIdentifier identifier = message.getIdentifier();
+        switch (identifier){
+            case DRAWMESSAGE:
+                DrawMessage drawMessage = (DrawMessage) arg;
+                String property = drawMessage.getProperty();
+                String drawContent = drawMessage.getContent();
 
-        String property = message.getProperty();
-        String content = message.getContent();
+                DrawEvent drawEvent = gson.fromJson(drawContent, DrawEvent.class);
 
-        DrawEvent drawEvent = gson.fromJson(content, DrawEvent.class);
+                requestDrawDot(property, drawEvent);
+                break;
+            case CHATMESSAGE:
+                ChatMessage chatMessage = (ChatMessage) arg;
+                String userProperty = chatMessage.getUserProperty();
+                String chatContent = chatMessage.getContent();
+                broadcastMessage(chatContent, userProperty);
 
-        requestDrawDot(property, drawEvent);
+        }
     }
+
+    private void broadcastMessage(String content, String userProperty) {
+        Platform.runLater(new Runnable() {
+            @Override
+            public void run() {
+                vboxChat.getChildren().add(new Text(userProperty + ": " + content));
+            }
+        });
+    }
+
     public void requestAddPlayer(String property, Player player){
         Platform.runLater(new Runnable() {
             @Override
@@ -231,6 +265,5 @@ public class Controller implements Observer {
             }
         });
     }
-
 
 }

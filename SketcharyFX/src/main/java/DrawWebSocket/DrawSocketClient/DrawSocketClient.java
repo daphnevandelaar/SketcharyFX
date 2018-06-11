@@ -1,8 +1,8 @@
 package DrawWebSocket.DrawSocketClient;
 
-
-import DrawWebSocket.DrawSocketShared.DrawSocketMessage;
-import DrawWebSocket.DrawSocketShared.DrawSocketMessageOperation;
+import DrawWebSocket.DrawShared.DrawSocketMessage;
+import DrawWebSocket.DrawShared.DrawSocketMessageOperation;
+import Sockets.SocketMessageIdentifier;
 import com.google.gson.Gson;
 import com.google.gson.JsonSyntaxException;
 
@@ -214,6 +214,7 @@ public class DrawSocketClient extends Drawer {
         DrawMessage commMessage = new DrawMessage();
         commMessage.setProperty(property);
         commMessage.setContent(content);
+        commMessage.setIdentifier(SocketMessageIdentifier.DRAWMESSAGE);
 
         // Notify observers
         this.setChanged();

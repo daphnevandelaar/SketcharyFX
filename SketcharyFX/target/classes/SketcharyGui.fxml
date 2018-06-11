@@ -15,7 +15,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
-<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SketcharyGUI.Controller">
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" >
    <columnConstraints>
       <ColumnConstraints />
    </columnConstraints>
@@ -25,8 +25,8 @@
    <children>
       <Pane prefHeight="839.0" prefWidth="1121.0" style="-fx-background-color: #FFFFFF;">
          <children>
-            <Button fx:id="btnLogin" layoutX="1033.0" layoutY="27.0" mnemonicParsing="false" onAction="#btnLogin_OnClick" prefHeight="25.0" prefWidth="74.0" text="Login" />
-            <TextField fx:id="tbUsername" layoutX="879.0" layoutY="27.0" />
+            <Button fx:id="btnLogin" layoutX="1033.0" layoutY="40.0" mnemonicParsing="false" onAction="#btnLogin_OnClick" prefHeight="25.0" prefWidth="74.0" text="Login" />
+            <TextField fx:id="tbUsername" layoutX="879.0" layoutY="40.0" />
             <ListView fx:id="lvGameParticipants" layoutX="879.0" layoutY="66.0" prefHeight="184.0" prefWidth="228.0" />
             <VBox id="vboxChat" fx:id="vboxChat" layoutX="780.0" layoutY="267.0" prefHeight="470.0" prefWidth="327.0" style="-fx-background-color: #8FFFD2;" />
             <TextField id="tbMessage" fx:id="tbMessage" layoutX="780.0" layoutY="768.0" prefHeight="25.0" prefWidth="240.0" />
@@ -38,6 +38,7 @@
                   <Font size="47.0" />
                </font>
             </Label>
+            <Label fx:id="lbUser" layoutX="879.0" layoutY="19.0" text="Label" />
             <!--<Button fx:id="btnTest" layoutX="270.0" layoutY="768.0" mnemonicParsing="false" onAction="#btnTest_OnClick" text="Button" />-->
             <!--<Button fx:id="btnTestt" layoutX="200.0" layoutY="768.0" mnemonicParsing="false" onAction="#btnTestt_OnClick" text="enable" />-->
          </children></Pane>

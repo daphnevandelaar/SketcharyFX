@@ -1,6 +1,8 @@
 package ChatWebSocket.ChatSocketShared;
 
-public class ChatSocketMessage {
+import Sockets.SocketMessage;
+
+public class ChatSocketMessage extends SocketMessage {
     private ChatSocketMessageOperation operation;
     private String content;
     private String eventProperty;

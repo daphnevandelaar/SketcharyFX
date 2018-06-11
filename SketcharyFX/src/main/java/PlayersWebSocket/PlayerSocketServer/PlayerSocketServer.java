@@ -12,8 +12,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import static PlayersWebSocket.PlayerSocketShared.PlayerSocketOperation.ONLINE;
-
 @ServerEndpoint(value="/player/")
 public class PlayerSocketServer {
 

@@ -1,8 +1,9 @@
 package ChatWebSocket.ChatSocketClient;
 
-public class ChatMessage {
+import Sockets.SocketMessage;
 
-    private String content;
+public class ChatMessage extends SocketMessage {
+
     private String eventProperty;
     private String userProperty;
 
@@ -18,10 +19,5 @@ public class ChatMessage {
     public void setUserProperty(String userProperty) {
         this.userProperty = userProperty;
     }
-    public String getContent() {
-        return content;
-    }
-    public void setContent(String content) {
-        this.content = content;
-    }
+
 }

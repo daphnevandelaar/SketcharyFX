@@ -1,6 +1,6 @@
 package ChatWebSocket;
 
-import ChatWebSockets.ChatSocketServer.ChatSocketServer;
+import ChatWebSocket.ChatSocketServer.ChatSocketServer;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.server.ServerConnector;
 import org.eclipse.jetty.servlet.ServletContextHandler;
@@ -9,7 +9,7 @@ import org.eclipse.jetty.websocket.jsr356.server.deploy.WebSocketServerContainer
 import javax.websocket.server.ServerContainer;
 
 public class ChatServerStartup {
-    private static final int PORT = 8095;
+    private static final int PORT = 8096;
 
     /**
      * @param args the command line arguments

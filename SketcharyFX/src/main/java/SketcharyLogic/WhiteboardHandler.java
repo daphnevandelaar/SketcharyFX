@@ -1,12 +1,6 @@
 package SketcharyLogic;
 
-import DrawWebSocket.DrawSocketClient.DrawMessage;
-import DrawWebSocket.DrawSocketClient.DrawSocketClient;
 import DrawWebSocket.DrawSocketClient.Drawer;
-import Models.DrawEvent;
-import com.google.gson.Gson;
-import javafx.event.ActionEvent;
-import javafx.scene.control.CheckBox;
 
 public class WhiteboardHandler {
 

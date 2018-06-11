@@ -1,7 +1,7 @@
 package DrawWebSocket.DrawSocketServer;
 
-import DrawWebSocket.DrawSocketShared.DrawSocketMessage;
-import DrawWebSocket.DrawSocketShared.DrawSocketMessageOperation;
+import DrawWebSocket.DrawShared.DrawSocketMessage;
+import DrawWebSocket.DrawShared.DrawSocketMessageOperation;
 import com.google.gson.Gson;
 import com.google.gson.JsonSyntaxException;
 
@@ -51,6 +51,7 @@ public class DrawSocketServer {
     private void handleMessageFromClient(String jsonMessage, Session session) {
         Gson gson = new Gson();
         DrawSocketMessage wbMessage = null;
+
         try {
             wbMessage = gson.fromJson(jsonMessage, DrawSocketMessage.class);
         }

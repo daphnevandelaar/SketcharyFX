@@ -1,4 +1,4 @@
-package DrawWebSocket.DrawSocketShared;
+package DrawWebSocket.DrawShared;
 
 public enum DrawSocketMessageOperation {
     REGISTERPROPERTY,         // Register a property (client only)
@@ -7,3 +7,4 @@ public enum DrawSocketMessageOperation {
     UNSUBSCRIBEFROMPROPERTY,  // Unsubscribe from a property (client only)
     UPDATEPROPERTY,           // Update property (client and server)
 }
+

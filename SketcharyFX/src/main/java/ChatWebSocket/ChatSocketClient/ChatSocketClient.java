@@ -3,6 +3,7 @@ package ChatWebSocket.ChatSocketClient;
 
 import ChatWebSocket.ChatSocketShared.ChatSocketMessage;
 import ChatWebSocket.ChatSocketShared.ChatSocketMessageOperation;
+import Sockets.SocketMessageIdentifier;
 import com.google.gson.Gson;
 
 import javax.websocket.*;
@@ -14,7 +15,7 @@ public class ChatSocketClient extends Chatter {
 
     private static ChatSocketClient instance = null;
 
-    private final String uri = "ws://localhost:8095/chat/";
+    private final String uri = "ws://localhost:8096/chat/";
     private Session session;
     private String message;
     private Gson gson = null;
@@ -116,6 +117,7 @@ public class ChatSocketClient extends Chatter {
         commMessage.setEventProperty(eventProperty);
         commMessage.setUserProperty(userProperty);
         commMessage.setContent(content);
+        commMessage.setIdentifier(SocketMessageIdentifier.CHATMESSAGE);
 
         // Notify observers
         this.setChanged();
