@@ -1,0 +1,16 @@
+
+[
+squid:S1067"9Replace this use of System.out or System.err by a logger.(‰þµÎøÿÿÿÿ8±ç’–¿,
+[
+squid:S106T"9Replace this use of System.out or System.err by a logger.(ÞìúÁúÿÿÿÿ8±ç’–¿,
+[
+squid:S106c"9Replace this use of System.out or System.err by a logger.(øºƒ¸ùÿÿÿÿ8±ç’–¿,
+V
+squid:S106-"9Replace this use of System.out or System.err by a logger.(ŒÅ³ù8±ç’–¿,
+V
+squid:S106"9Replace this use of System.out or System.err by a logger.(ö¥û©8±ç’–¿,
+usquid:S37760"RRefactor this method to reduce its Cognitive Complexity from 28 to the 15 allowed.(éýß×üÿÿÿÿ8±ç’–¿,
+~squid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(þÉ¬Âýÿÿÿÿ8±ç’–¿,
+Msquid:S1066Y"/Merge this if statement with the enclosing one.(Ô†¿‰8±ç’–¿,
+V
+squid:S106I"9Replace this use of System.out or System.err by a logger.(î±Š 8±ç’–¿,

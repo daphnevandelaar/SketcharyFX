@@ -1,29 +1,29 @@
 
-lsquid:S3776"RRefactor this method to reduce its Cognitive Complexity from 21 to the 15 allowed.(Œö…íüÿÿÿÿ
-Y
-squid:S106"9Replace this use of System.out or System.err by a logger.(ÔøõÛÿÿÿÿÿ8Ñí’•»,
-Usquid:S1854";Remove this useless assignment to local variable "message".(æª‚êüÿÿÿÿ
-Y
-squid:S106"9Replace this use of System.out or System.err by a logger.(¦±ëüÿÿÿÿ8Ñí’•»,
-M
-squid:S106"9Replace this use of System.out or System.err by a logger.(§Å™
-L
-squid:S106"9Replace this use of System.out or System.err by a logger.(‡è#
-R
-squid:S106"9Replace this use of System.out or System.err by a logger.(¼×éÜøÿÿÿÿ
-R
-squid:S106"9Replace this use of System.out or System.err by a logger.(Ç ‡ùÿÿÿÿ
-psquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ö“Ë…
-nsquid:S1192"ZDefine a constant instead of duplicating this literal "[WebSocket Session ID] : " 3 times.(•é«K
-Fsquid:S1481",Remove this unused "message" local variable.(æª‚êüÿÿÿÿ
+V
+squid:S106f"9Replace this use of System.out or System.err by a logger.(Ôğ¯Î8Ñí’•»,
+jsquid:S3824I"NReplace this "Map.get()" and condition with a call to "Map.computeIfAbsent()".(ÕïÅ®üÿÿÿÿ
+Hsquid:S1481",Remove this unused "message" local variable.(æª‚êüÿÿÿÿ
+[
+squid:S106`"9Replace this use of System.out or System.err by a logger.(¦±ëüÿÿÿÿ8Ñí’•»,
+[
+squid:S106c"9Replace this use of System.out or System.err by a logger.(ÔøõÛÿÿÿÿÿ8Ñí’•»,
 T
-squid:S106"9Replace this use of System.out or System.err by a logger.(Ôğ¯Î8Ñí’•»,
-hsquid:S3824"NReplace this "Map.get()" and condition with a call to "Map.computeIfAbsent()".(ÕïÅ®üÿÿÿÿ
-L
-squid:S106"9Replace this use of System.out or System.err by a logger.(•é«K
-M
-squid:S106"9Replace this use of System.out or System.err by a logger.(ŒÅ³ù
-M
-squid:S106"9Replace this use of System.out or System.err by a logger.(¥ÿÕ°
-R
-squid:S106"9Replace this use of System.out or System.err by a logger.(¸Î‰Õûÿÿÿÿ
+squid:S106."9Replace this use of System.out or System.err by a logger.(¸Î‰Õûÿÿÿÿ
+Wsquid:S1854";Remove this useless assignment to local variable "message".(æª‚êüÿÿÿÿ
+O
+squid:S106"9Replace this use of System.out or System.err by a logger.(¥ÿÕ°
+O
+squid:S106j"9Replace this use of System.out or System.err by a logger.(§Å™
+O
+squid:S106/"9Replace this use of System.out or System.err by a logger.(ŒÅ³ù
+rsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ö“Ë…
+N
+squid:S106("9Replace this use of System.out or System.err by a logger.(‡è#
+T
+squid:S106;"9Replace this use of System.out or System.err by a logger.(Ç ‡ùÿÿÿÿ
+nsquid:S37763"RRefactor this method to reduce its Cognitive Complexity from 21 to the 15 allowed.(Œö…íüÿÿÿÿ
+N
+squid:S106""9Replace this use of System.out or System.err by a logger.(•é«K
+psquid:S1192""ZDefine a constant instead of duplicating this literal "[WebSocket Session ID] : " 3 times.(•é«K
+T
+squid:S106"9Replace this use of System.out or System.err by a logger.(¼×éÜøÿÿÿÿ

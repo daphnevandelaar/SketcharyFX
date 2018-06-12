@@ -9,6 +9,7 @@ import DrawWebSocket.DrawSocketClient.Drawer;
 import Logic.GameLogic;
 import Models.DrawEvent;
 import Models.Game;
+import Models.Room;
 import Models.User;
 import PlayersWebSocket.PlayerSocketClient.Player;
 import PlayersWebSocket.PlayerSocketClient.PlayerSocketClient;
@@ -74,9 +75,11 @@ public class Controller implements Observer {
     Drawer drawer = null;
     Player player = null;
     Chatter chatter = null;
+    private Room room;
 
-    public Controller(User user){
+    public Controller(User user, Room room){
         this.user = user;
+        this.room = room;
     }
 
     private String currentProperty = "black";
@@ -92,6 +95,11 @@ public class Controller implements Observer {
 //        cvWhiteboard.setDisable(false);
 //        System.out.println("Gekliktttt");
 //    }
+
+    @FXML
+    protected void initialize(){
+        lbUser.setText(room.getRoomName());
+    }
 
     private void startGame(){
         lbTimer.textProperty().bind(timeSeconds.asString());

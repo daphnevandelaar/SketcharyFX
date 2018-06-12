@@ -1,6 +1,6 @@
 package SketcharyGUI;
 
-import Factory.SketchyControllerFactory;
+import Factory.RoomOverviewControllerFactory;
 import Models.User;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -31,10 +31,10 @@ public class LoginController {
                 //todo show error message that login in failed
                 return;
             }
-            FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("SketcharyGui.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("SketchyRoomOverview.fxml"));
             //TODO: naam aanpasse sketchy -- controller
-            Controller controller = SketchyControllerFactory.sketchyController(user);
-            loader.setController(controller);
+            SketcharyRoomOverviewController roomController = RoomOverviewControllerFactory.sketchyController(user);
+            loader.setController(roomController);
             Parent root = loader.load();
             //Open and show the new homepageMember window
             Stage stage = new Stage();

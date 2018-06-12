@@ -1,43 +1,39 @@
 
-asquid:UnusedPrivateMethodl"0Remove this unused private "openSketchy" method.(íà™ûÿÿÿÿ8ğııõ¾,
-Ssquid:S1191/"5Use classes from the Java API instead of Sun classes.(˜½‘8ğııõ¾,
-dsquid:S1192O"FDefine a constant instead of duplicating this literal "black" 3 times.(¤ë±8ğııõ¾,
-usquid:S1450H"WRemove the "timeline" field and declare it as a local variable in the relevant methods.(›ŸòÃ8ğııõ¾,
-hsquid:CommentedOutCodeLineS"<This block of commented-out lines of code should be removed.(î·68ğııõ¾,
-isquid:CommentedOutCodeLineX"<This block of commented-out lines of code should be removed.(œÜƒÒ8ğııõ¾,
-osquid:CommentedOutCodeLineÆ"<This block of commented-out lines of code should be removed.(´İ•şÿÿÿÿ8ğııõ¾,
-V
-squid:S106x"9Replace this use of System.out or System.err by a logger.(ö¬8ğııõ¾,
-\
-squid:S106‚"9Replace this use of System.out or System.err by a logger.(”¦øıÿÿÿÿ8ğııõ¾,
+Zsquid:UnusedPrivateMethodh".Remove this unused private "startGame" method.(æôÈ8½†––¿,
+asquid:UnusedPrivateMethodw"0Remove this unused private "openSketchy" method.(íà™ûÿÿÿÿ8½†––¿,
+"squid:SwitchLastCaseIsDefaultCheckä"YComplete cases by adding the missing enum constants or add a default case to this switch.(ÕÒ8½†––¿,
+Ssquid:S1191-"5Use classes from the Java API instead of Sun classes.(˜½‘8½†––¿,
+dsquid:S1192U"FDefine a constant instead of duplicating this literal "black" 3 times.(¤ë±8½†––¿,
+usquid:S1450F"WRemove the "timeline" field and declare it as a local variable in the relevant methods.(›ŸòÃ8½†––¿,
+jsquid:S1301ä"KReplace this "switch" statement by "if" statements to increase readability.(ÕÒ8½†––¿,
+hsquid:CommentedOutCodeLineY"<This block of commented-out lines of code should be removed.(î·68½†––¿,
+isquid:CommentedOutCodeLine^"<This block of commented-out lines of code should be removed.(œÜƒÒ8½†––¿,
+jsquid:CommentedOutCodeLineŠ"<This block of commented-out lines of code should be removed.(×ÖšÔ8½†––¿,
+jsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(©šï×8½†––¿,
+jsquid:CommentedOutCodeLine™"<This block of commented-out lines of code should be removed.(»¡¸È8½†––¿,
+osquid:CommentedOutCodeLineœ"<This block of commented-out lines of code should be removed.(Øë×¹úÿÿÿÿ8½†––¿,
+osquid:CommentedOutCodeLineÛ"<This block of commented-out lines of code should be removed.(´İ•şÿÿÿÿ8½†––¿,
 W
-squid:S106ƒ"9Replace this use of System.out or System.err by a logger.(–ÊĞÜ8ğııõ¾,
-Usquid:S1135g"2Complete the task associated to this TODO comment.(¿¸Îûÿÿÿÿ8ğııõ¾,
-Vsquid:S1135˜"2Complete the task associated to this TODO comment.(‰ªë„úÿÿÿÿ8ğııõ¾,
-Qsquid:S1135™"2Complete the task associated to this TODO comment.(¡î™Ğ8ğııõ¾,
-Qsquid:S1135š"2Complete the task associated to this TODO comment.(¼ãğı8ğııõ¾,
-Qsquid:S1135›"2Complete the task associated to this TODO comment.(ıöĞÛ8ğııõ¾,
-Isquid:S1481à"*Remove this unused "color" local variable.(¼¦ç¯8ğııõ¾,
-msquid:S00100}"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ã›®8ğııõ¾,
-ssquid:S00100‰"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(§“–üÿÿÿÿ8ğııõ¾,
-ssquid:S00100±"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÿÆÖñÿÿÿÿÿ8ğııõ¾,
-nsquid:S00100·"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‰££Ò8ğııõ¾,
-Ssquid:S1172Ö"/Remove this unused method parameter "property".(ªĞûÆıÿÿÿÿ8ğııõ¾,
-Ssquid:S1172ß"/Remove this unused method parameter "property".(Æš„œøÿÿÿÿ8ğııõ¾,
-Lsquid:S1604×"(Make this anonymous inner class a lambda(ôâŠûıÿÿÿÿ8ğııõ¾,
-Lsquid:S1604ã"(Make this anonymous inner class a lambda(ôâŠûıÿÿÿÿ8ğııõ¾,
-Xsquid:S1854à"9Remove this useless assignment to local variable "color".(¼¦ç¯8ğııõ¾,
-qsquid:S00117¿"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¼ë–Ğ8ğııõ¾,
-qsquid:S00117¿"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¼ë–Ğ8ğııõ¾,
-ysquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(•·ãş8ğııõ¾,
-asquid:UselessImportCheck"6Remove this unused import 'javafx.event.EventHandler'.(º»û˜8ğııõ¾,
-[squid:UselessImportCheck4"0Remove this unused import 'java.util.TimerTask'.(àÀÇÙ8ğııõ¾,
-[squid:UselessImportCheck"0Remove this unused import 'Factory.UserFactory'.(ı•œ½8ğııõ¾,
-~squid:UselessImportCheck"NRemove this unused import 'PlayersWebSocket.PlayerSocketClient.PlayerMessage'.(±Ü…¾øÿÿÿÿ8ğııõ¾,
-]squid:UselessImportCheck	"2Remove this unused import 'Logic.ISketcharyLogic'.(ÿÉêœ8ğııõ¾,
-Xsquid:UselessImportCheck"-Remove this unused import 'Models.Sketchary'.(€ÁÊò8ğııõ¾,
-esquid:UselessImportCheck"5Remove this unused import 'Factory.SketcharyFactory'.(âöçÏùÿÿÿÿ8ğııõ¾,
-`squid:UselessImportCheck1"0Remove this unused import 'java.io.IOException'.(ªº»Úıÿÿÿÿ8ğııõ¾,
-_squid:UselessImportCheck+"/Remove this unused import 'javafx.stage.Popup'.(›Ü…Èÿÿÿÿÿ8ğııõ¾,
-]squid:UselessImportCheck
-"-Remove this unused import 'Logic.IUserLogic'.(ô ‘Äıÿÿÿÿ8ğııõ¾,
+squid:S106ƒ"9Replace this use of System.out or System.err by a logger.(ö¬8½†––¿,
+bsquid:HiddenFieldCheck©"8Rename "user" which hides the field declared at line 72.(£¾á„8½†––¿,
+gsquid:HiddenFieldCheck­"8Rename "user" which hides the field declared at line 72.(øñÀØùÿÿÿÿ8½†––¿,
+Usquid:S1135r"2Complete the task associated to this TODO comment.(¿¸Îûÿÿÿÿ8½†––¿,
+Vsquid:S1135¤"2Complete the task associated to this TODO comment.(‰ªë„úÿÿÿÿ8½†––¿,
+Qsquid:S1135¥"2Complete the task associated to this TODO comment.(¡î™Ğ8½†––¿,
+Qsquid:S1135¦"2Complete the task associated to this TODO comment.(¼ãğı8½†––¿,
+Qsquid:S1135§"2Complete the task associated to this TODO comment.(ıöĞÛ8½†––¿,
+Isquid:S1481Š"*Remove this unused "color" local variable.(¼¦ç¯8½†––¿,
+nsquid:S00100ˆ"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ã›®8½†––¿,
+ssquid:S00100”"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(§“–üÿÿÿÿ8½†––¿,
+ssquid:S00100½"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÿÆÖñÿÿÿÿÿ8½†––¿,
+nsquid:S00100Ì"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‰££Ò8½†––¿,
+Ssquid:S1172€"/Remove this unused method parameter "property".(ªĞûÆıÿÿÿÿ8½†––¿,
+Ssquid:S1172‰"/Remove this unused method parameter "property".(Æš„œøÿÿÿÿ8½†––¿,
+Lsquid:S1604ø"(Make this anonymous inner class a lambda(ôâŠûıÿÿÿÿ8½†––¿,
+Lsquid:S1604"(Make this anonymous inner class a lambda(ôâŠûıÿÿÿÿ8½†––¿,
+Lsquid:S1604"(Make this anonymous inner class a lambda(ôâŠûıÿÿÿÿ8½†––¿,
+Xsquid:S1854Š"9Remove this useless assignment to local variable "color".(¼¦ç¯8½†––¿,
+qsquid:S00117Ô"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¼ë–Ğ8½†––¿,
+qsquid:S00117Ô"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¼ë–Ğ8½†––¿,
+ysquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(•·ãş8½†––¿,
+~squid:UselessImportCheck"SRemove this unused import 'PlayersWebSocket.PlayerSocketClient.PlayerSocketClient'.(ôÛŞ¡8½†––¿,

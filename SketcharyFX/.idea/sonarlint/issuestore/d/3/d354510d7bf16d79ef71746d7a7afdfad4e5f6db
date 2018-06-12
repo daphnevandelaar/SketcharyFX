@@ -1,0 +1,4 @@
+
+[squid:S1118":Add a private constructor to hide the implicit public one.(”ã—Çøÿÿÿÿ8ª²Ë•¿,
+Qsquid:UselessImportCheck"(Remove this unused import 'Models.Room'.(¡áºå8ª²Ë•¿,
+wsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¡•ë…8ª²Ë•¿,
