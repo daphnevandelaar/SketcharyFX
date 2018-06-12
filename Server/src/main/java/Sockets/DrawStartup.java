@@ -9,21 +9,21 @@ import org.eclipse.jetty.websocket.jsr356.server.deploy.WebSocketServerContainer
 
 import javax.websocket.server.ServerContainer;
 
-public class Startup {
-    private static final int chatPORT = 8097;
+public class DrawStartup {
+    private static final int drawPORT = 8095;
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        startChatSocketServer();
+        startDrawSocketServer();
     }
 
 
     // Start the web socket server
-    private static void startChatSocketServer() {
+    private static void startDrawSocketServer() {
         Server webSocketServer = new Server();
         ServerConnector connector = new ServerConnector(webSocketServer);
-        connector.setPort(chatPORT);
+        connector.setPort(drawPORT);
         webSocketServer.addConnector(connector);
 
         // Setup the basic application "context" for this application at "/"
@@ -37,7 +37,7 @@ public class Startup {
             ServerContainer wscontainer = WebSocketServerContainerInitializer.configureContext(webSocketContext);
 
             // Add WebSocket endpoint to javax.websocket layer
-            wscontainer.addEndpoint(ChatSocketServer.class);
+            wscontainer.addEndpoint(DrawSocketServer.class);
 
             webSocketServer.start();
             //server.dump(System.err);

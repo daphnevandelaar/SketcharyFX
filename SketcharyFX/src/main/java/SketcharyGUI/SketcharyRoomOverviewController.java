@@ -1,8 +1,11 @@
 package SketcharyGUI;
 
+import ChatWebSocket.ChatSocketClient.Chatter;
+import DrawWebSocket.DrawSocketClient.Drawer;
 import Factory.SketchyControllerFactory;
 import Models.Room;
 import Models.User;
+import PlayersWebSocket.PlayerSocketClient.Player;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -67,6 +70,14 @@ public class SketcharyRoomOverviewController {
         catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    Drawer drawer = null;
+    Player player = null;
+    Chatter chatter = null;
+
+    private void createSocketConnection(){
+
     }
 
 }

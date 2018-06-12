@@ -1,18 +1,14 @@
 package SketcharyGUI;
 
-import ChatWebSocket.ChatSocketClient.ChatMessage;
-import ChatWebSocket.ChatSocketClient.ChatSocketClient;
-import ChatWebSocket.ChatSocketClient.Chatter;
-import DrawWebSocket.DrawSocketClient.DrawMessage;
-import DrawWebSocket.DrawSocketClient.DrawSocketClient;
-import DrawWebSocket.DrawSocketClient.Drawer;
-import Logic.GameLogic;
+
+import ChatWebSocket.ChatSocketClient.*;
+import DrawWebSocket.DrawSocketClient.*;
+
+
 import Models.DrawEvent;
-import Models.Game;
 import Models.Room;
 import Models.User;
 import PlayersWebSocket.PlayerSocketClient.Player;
-import PlayersWebSocket.PlayerSocketClient.PlayerSocketClient;
 import SketcharyLogic.WhiteboardHandler;
 import Sockets.SocketMessage;
 import Sockets.SocketMessageIdentifier;
@@ -98,7 +94,36 @@ public class Controller implements Observer {
 
     @FXML
     protected void initialize(){
+
         lbUser.setText(room.getRoomName());
+
+        drawer = DrawSocketClient.getInstance();
+        drawer.addObserver(this);
+        drawer.start();
+        drawer.register("black");
+        drawer.subscribe("black");
+
+        chatter = ChatSocketClient.getInstance();
+        chatter.addObserver(this);
+        chatter.start();
+        chatter.register(user.getUsername(), room.getRoomName());
+        chatter.subscribe(user.getUsername(), room.getRoomName());
+
+        // Establish connection with server
+
+
+//        //TODO: Update?
+//        //TODO: Disable controls to force login
+//        //TODO: Enable controls after login
+//        //TODO: ifstatement when no text in textbox
+//        if(!tbUsername.getText().equals("")){
+//            User user = new User(tbUsername.getText());
+//            lvGameParticipants.getItems().add(user);
+//        }
+//        else{
+//            User user = new User("GUEST");
+//            lvGameParticipants.getItems().add(user);
+//        }
     }
 
     private void startGame(){
@@ -144,37 +169,6 @@ public class Controller implements Observer {
 
     }
 
-    @FXML
-    private void btnLogin_OnClick(ActionEvent event){
-        // Create the client web socket to communicate with other white boards
-        drawer = DrawSocketClient.getInstance();
-        drawer.addObserver(this);
-
-//        chatter = ChatSocketClient.getInstance();
-//        chatter.addObserver(this);
-//
-//        chatter.start();
-//        chatter.register(user.getUsername(), "game");
-//        chatter.subscribe(user.getUsername(), "game");
-
-        // Establish connection with server
-        drawer.start();
-        drawer.register("black");
-        drawer.subscribe("black");
-        //TODO: Update?
-        //TODO: Disable controls to force login
-        //TODO: Enable controls after login
-        //TODO: ifstatement when no text in textbox
-        if(!tbUsername.getText().equals("")){
-            User user = new User(tbUsername.getText());
-            lvGameParticipants.getItems().add(user);
-        }
-        else{
-            User user = new User("GUEST");
-            lvGameParticipants.getItems().add(user);
-        }
-    }
-
     private void drawDot(Color color, double xPos, double yPos) {
         // Graphics
         GraphicsContext gc = cvWhiteboard.getGraphicsContext2D();
@@ -182,13 +176,11 @@ public class Controller implements Observer {
         gc.setFill(color);
         // Draw dot
         gc.fillOval(xPos - 2, yPos - 2, 10, 10);
-
     }
 
     @FXML
     private void btnSend_OnClick(ActionEvent event){
-
-        broadcastCreatedMessage(tbUsername.getText(), "game", tbMessage.getText());
+        broadcastCreatedMessage(user.getUsername(), room.getRoomName(), tbMessage.getText());
     }
 
     public void broadcastCreatedMessage(String userProperty, String eventProperty, String content){
@@ -216,7 +208,7 @@ public class Controller implements Observer {
             DrawMessage message = new DrawMessage();
             message.setProperty(property);
             message.setContent(content);
-            //System.out.println(message);
+            message.setIdentifier(SocketMessageIdentifier.DRAWMESSAGE);
             drawer.update(message);
         }
     }
@@ -225,14 +217,14 @@ public class Controller implements Observer {
     public void update(Observable o, Object arg) {
         SocketMessage message = (SocketMessage) arg;
         SocketMessageIdentifier identifier = message.getIdentifier();
+        System.out.println("update: " + message.getIdentifier());
+
         switch (identifier){
             case DRAWMESSAGE:
                 DrawMessage drawMessage = (DrawMessage) arg;
                 String property = drawMessage.getProperty();
                 String drawContent = drawMessage.getContent();
-
                 DrawEvent drawEvent = gson.fromJson(drawContent, DrawEvent.class);
-
                 requestDrawDot(property, drawEvent);
                 break;
             case CHATMESSAGE:
@@ -240,7 +232,6 @@ public class Controller implements Observer {
                 String userProperty = chatMessage.getUserProperty();
                 String chatContent = chatMessage.getContent();
                 broadcastMessage(chatContent, userProperty);
-
         }
     }
 

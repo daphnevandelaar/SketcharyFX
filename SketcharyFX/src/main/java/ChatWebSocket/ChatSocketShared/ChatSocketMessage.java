@@ -4,7 +4,6 @@ import Sockets.SocketMessage;
 
 public class ChatSocketMessage extends SocketMessage {
     private ChatSocketMessageOperation operation;
-    private String content;
     private String eventProperty;
     private String userProperty;
 
@@ -25,11 +24,5 @@ public class ChatSocketMessage extends SocketMessage {
     }
     public void setOperation(ChatSocketMessageOperation operation){
         this.operation = operation;
-    }
-    public String getContent() {
-        return content;
-    }
-    public void setContent(String content) {
-        this.content = content;
     }
 }

@@ -38,7 +38,7 @@ public class DrawSocketClient extends Drawer {
      */
     public static DrawSocketClient getInstance() {
         if (instance == null) {
-            System.out.println("[WebSocket Client create singleton instance]");
+            System.out.println("[Drawsocket Client create singleton instance]");
             instance = new DrawSocketClient();
         }
         return instance;
@@ -48,7 +48,7 @@ public class DrawSocketClient extends Drawer {
      *  Start the connection.
      */
     public void start() {
-        System.out.println("[WebSocket Client start connection]");
+        System.out.println("[Drawsocket Client start connection]");
         if (!isRunning) {
             isRunning = true;
             startClient();
@@ -65,25 +65,25 @@ public class DrawSocketClient extends Drawer {
 
     @OnOpen
     public void onWebSocketConnect(Session session){
-        System.out.println("[WebSocket Client open session] " + session.getRequestURI());
+        System.out.println("[Drawsocket Client open session] " + session.getRequestURI());
         this.session = session;
     }
 
     @OnMessage
     public void onWebSocketText(String message, Session session){
         this.message = message;
-        System.out.println("[WebSocket Client message received] " + message);
+        System.out.println("[Drawsocket Client message received] " + message);
         processMessage(message);
     }
 
     @OnError
     public void onWebSocketError(Session session, Throwable cause) {
-        System.out.println("[WebSocket Client connection error] " + cause.toString());
+        System.out.println("[Drawsocket Client connection error] " + cause.toString());
     }
 
     @OnClose
     public void onWebSocketClose(CloseReason reason){
-        System.out.print("[WebSocket Client close session] " + session.getRequestURI());
+        System.out.print("[Drawsocket Client close session] " + session.getRequestURI());
         System.out.println(" for reason " + reason);
         session = null;
     }

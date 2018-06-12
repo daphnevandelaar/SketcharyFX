@@ -6,5 +6,5 @@ public enum ChatSocketMessageOperation {
     UPDATE,             //Update property client + server
     REGISTER,           //Register to server
     UNREGISTER,         //Unregister from server
-    //REFRESHCHAT,        //Gets all the messages in a different chat
+    USERLOGIN,
 }

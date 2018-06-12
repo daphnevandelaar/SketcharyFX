@@ -5,6 +5,7 @@ import ChatWebSocket.ChatSocketShared.ChatSocketMessage;
 import ChatWebSocket.ChatSocketShared.ChatSocketMessageOperation;
 import Sockets.SocketMessageIdentifier;
 import com.google.gson.Gson;
+import com.google.gson.JsonSyntaxException;
 
 import javax.websocket.*;
 import java.io.IOException;
@@ -15,7 +16,7 @@ public class ChatSocketClient extends Chatter {
 
     private static ChatSocketClient instance = null;
 
-    private final String uri = "ws://localhost:8096/chat/";
+    private final String uri = "ws://localhost:8097/chat/";
     private Session session;
     private String message;
     private Gson gson = null;
@@ -28,13 +29,14 @@ public class ChatSocketClient extends Chatter {
 
     public static ChatSocketClient getInstance() {
         if (instance == null) {
-            System.out.println("[WebSocket Client create singleton instance]");
+            System.out.println("[Chatsocket Client create singleton instance]");
             instance = new ChatSocketClient();
         }
         return instance;
     }
 
     public void start() {
+        System.out.println("[Chatsocket Client start connection]");
         if (!isRunning) {
             isRunning = true;
             startClient();
@@ -42,6 +44,7 @@ public class ChatSocketClient extends Chatter {
     }
 
     private void startClient() {
+        System.out.println("[Chatsocket Client start]");
         try {
             WebSocketContainer container = ContainerProvider.getWebSocketContainer();
             container.connectToServer(this, new URI(uri));
@@ -71,42 +74,52 @@ public class ChatSocketClient extends Chatter {
 
     @OnOpen
     public void onWebSocketConnect(Session session){
+        System.out.println("[Drawsocket Client open session] " + session.getRequestURI());
         this.session = session;
-        System.out.println("Creating connection Client");
     }
 
     @OnMessage
     public void onWebSocketText(String message, Session session){
         this.message = message;
+        System.out.println("[Drawsocket Client message received] " + message);
         processMessage(message);
     }
 
     private void processMessage(String jsonMsg) {
-        ChatSocketMessage chatMsg;
-        try{
-            chatMsg = gson.fromJson(jsonMsg, ChatSocketMessage.class);
+        // Parse incoming message
+        ChatSocketMessage wsMessage;
+        try {
+            wsMessage = gson.fromJson(jsonMsg, ChatSocketMessage.class);
         }
-        catch (Exception ex){
-            System.out.println(ex.getMessage());
+        catch (JsonSyntaxException ex) {
+            System.out.println("[WebSocket Client ERROR: cannot parse Json message " + jsonMsg);
             return;
         }
 
+        // Only operation update property will be further processed
         ChatSocketMessageOperation operation;
-        operation = chatMsg.getOperation();
+        operation = wsMessage.getOperation();
         if (operation == null || operation != ChatSocketMessageOperation.UPDATE) {
             System.out.println("[WebSocket Client ERROR: update property operation expected]");
             return;
         }
 
         // Obtain property from message
-        //TODO: property verwijderen, kijken of user niet null is..
-        //TODO: eventproperty mag miss null zijn..
-        String eventProperty = chatMsg.getEventProperty();
-        String userProperty = chatMsg.getUserProperty();
+        String userProperty = wsMessage.getUserProperty();
+        if (userProperty == null || "".equals(userProperty)) {
+            System.out.println("[WebSocket Client ERROR: property not defined]");
+            return;
+        }
+
+        // Obtain property from message
+        String eventProperty = wsMessage.getEventProperty();
+        if (eventProperty == null || "".equals(eventProperty)) {
+            System.out.println("[WebSocket Client ERROR: property not defined]");
+            return;
+        }
 
         // Obtain content from message
-        String content = chatMsg.getContent();
-
+        String content = wsMessage.getContent();
         if (content == null || "".equals(content)) {
             System.out.println("[WebSocket Client ERROR: message without content]");
             return;
@@ -114,8 +127,8 @@ public class ChatSocketClient extends Chatter {
 
         // Create instance of CommunicaterMessage for observers
         ChatMessage commMessage = new ChatMessage();
-        commMessage.setEventProperty(eventProperty);
         commMessage.setUserProperty(userProperty);
+        commMessage.setEventProperty(eventProperty);
         commMessage.setContent(content);
         commMessage.setIdentifier(SocketMessageIdentifier.CHATMESSAGE);
 
@@ -138,7 +151,7 @@ public class ChatSocketClient extends Chatter {
         session.getAsyncRemote().sendText(jsonMessage);
     }
 
-    public void subscribe(String userProperty, String eventProperty) {
+public void subscribe(String userProperty, String eventProperty) {
         ChatSocketMessage message = new ChatSocketMessage();
         message.setOperation(ChatSocketMessageOperation.SUBSCRIBEEVENT);
         message.setUserProperty(userProperty);
@@ -156,16 +169,13 @@ public class ChatSocketClient extends Chatter {
 
     @Override
     public void unregister(String userProperty, String eventProperty) {
-
-    }
-
-    public void unregister(String userProperty) {
         ChatSocketMessage message = new ChatSocketMessage();
         message.setOperation(ChatSocketMessageOperation.UNREGISTER);
         message.setUserProperty(userProperty);
         sendMessageToServer(message);
     }
 
+    @Override
     public void update(ChatMessage msg) {
         ChatSocketMessage chatMsg = new ChatSocketMessage();
         chatMsg.setOperation(ChatSocketMessageOperation.UPDATE);

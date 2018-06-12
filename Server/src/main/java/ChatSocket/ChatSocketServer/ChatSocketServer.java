@@ -27,12 +27,14 @@ public class ChatSocketServer {
 
     @OnOpen
     public void onConnect(Session session){
+        System.out.println("[WebSocket Connected] SessionID: " + session.getId());
+        String message = String.format("[New client with client side session ID]: %s", session.getId());
         sessions.add(session);
-        System.out.println("Connection established");
-
+        System.out.println("[#sessions]: " + sessions.size());
     }
     @OnMessage
     public void onText(String message, Session session){
+        System.out.println("[WebSocket Session ID] : " + session.getId() + " [Received] : " + message);
         handleMessageFromClient(message, session);
     }
     @OnClose
@@ -48,6 +50,9 @@ public class ChatSocketServer {
     private void handleMessageFromClient(String jsonMsg, Session session) {
         Gson gson = new Gson();
         ChatSocketMessage chatMsg = null;
+
+        System.out.println(jsonMsg);
+
         try {
             chatMsg = gson.fromJson(jsonMsg, ChatSocketMessage.class);
         }
@@ -59,17 +64,19 @@ public class ChatSocketServer {
         // Operation defined in message
         ChatSocketMessageOperation operation;
         operation = chatMsg.getOperation();
-
+        System.out.println("Operation: " + operation);
         // Process message based on operation
         String userProperty = chatMsg.getUserProperty();
         String eventProperty = chatMsg.getEventProperty();
-
+        System.out.println("Event: " + eventProperty);
+        System.out.println("EventSess: " + eventPropertySessions.get(eventProperty));
         if(operation != null && userProperty != null){
             switch(operation){
                 case REGISTER:
                     // Register property if not registered yet
                     if (eventPropertySessions.get(eventProperty) == null) {
                         eventPropertySessions.put(eventProperty, new ArrayList<Session>());
+                        userPropertySessions.put(userProperty, new ArrayList<Session>());
                         System.out.println("User logged in: " + userProperty + " on " + eventProperty);
                     }
                     break;
@@ -81,7 +88,22 @@ public class ChatSocketServer {
                 case SUBSCRIBEEVENT:
                     if (eventPropertySessions.get(eventProperty) != null) {
                             eventPropertySessions.get(eventProperty).add(session);
+
+                        //TODO: add user to screen with all the subscribed users in an event
                             System.out.println("New subscription from: " + userProperty + " to: " + eventProperty);
+                    }
+                    break;
+                case USERLOGIN:
+                    if (eventPropertySessions.get(eventProperty) != null) {
+                        userPropertySessions.get(userProperty).add(session);
+
+                        if(userPropertySessions.get(userProperty) != null){
+                            for(Session sess : userPropertySessions.get(userProperty)){
+                                sess.getAsyncRemote().sendText(jsonMsg);
+                            }
+                        }
+
+                        System.out.println("New subscription from: " + userProperty + " to: " + eventProperty);
                     }
                     break;
                 case UNSUBSCRIBEEVENT:
@@ -99,7 +121,12 @@ public class ChatSocketServer {
                                 System.out.println("Msg to: " + sess.getId());
                                 sess.getAsyncRemote().sendText(jsonMsg);
                             }
-                        }
+                        System.out.println("[WebSocket end sending message to subscribers]");
+                    }
+                    break;
+                default:
+                    System.out.println("[WebSocket ERROR: cannot process Json message " + jsonMsg);
+                    break;
             }
         }
     }
