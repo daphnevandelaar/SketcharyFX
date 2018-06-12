@@ -21,4 +21,9 @@ public class UserRepository extends Repository<User> implements IUserRepository{
     public User getRandomUser() {
         return userContext.getRandomUser();
     }
+
+    @Override
+    public User getPassword(String username) {
+        return userContext.getPassword(username);
+    }
 }

@@ -38,7 +38,7 @@ public class SketcharyRoomOverviewController {
         lvRooms.getItems().add("Molenwiek");
         lvRooms.getItems().add("Gouden Klompen");
 
-        lbUser.setText(user.getUsername());
+        lbUser.setText("Welkom " + user.getUsername() + ",");
     }
 
     @FXML
@@ -48,7 +48,6 @@ public class SketcharyRoomOverviewController {
 
         Room room = new Room();
         room.setRoomName(roomName);
-
 
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("SketcharyGui.fxml"));

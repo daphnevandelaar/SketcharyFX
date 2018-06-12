@@ -10,4 +10,5 @@ public interface IUserLogic {
     void insert(User user);
     List<User> getUserByLevel(int level);
     User getRandomUser();
+    User getPassword(String username);
 }

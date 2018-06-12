@@ -21,9 +21,7 @@ import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
+import javafx.geometry.Pos;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.Button;
@@ -33,10 +31,8 @@ import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
+import javafx.scene.text.Font;
 import javafx.scene.text.Text;
-import javafx.stage.Modality;
-import javafx.stage.Stage;
-import javafx.stage.StageStyle;
 import javafx.util.Duration;
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
@@ -94,8 +90,14 @@ public class Controller implements Observer {
 
     @FXML
     protected void initialize(){
-
         lbUser.setText(room.getRoomName());
+
+        Text chatboxTitle = new Text();
+        chatboxTitle.setText("Chatbox van " + room.getRoomName());
+        chatboxTitle.setFont(new Font("Bradley Hand ITC", 16));
+        vboxChat.setAlignment(Pos.TOP_CENTER);
+        vboxChat.getChildren().add(new Text(" "));
+        vboxChat.getChildren().add(chatboxTitle);
 
         drawer = DrawSocketClient.getInstance();
         drawer.addObserver(this);
@@ -139,22 +141,6 @@ public class Controller implements Observer {
             //TODO: implement einde van de game hier
             throw new NotImplementedException();
         });
-    }
-
-    private void openSketchy(){
-        try{
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/SketchyPopUp.fxml"));
-            Parent root1 = (Parent) fxmlLoader.load();
-            Stage stage = new Stage();
-            stage.initModality(Modality.APPLICATION_MODAL);
-            stage.initStyle(StageStyle.UNDECORATED);
-            stage.setTitle("Sketchy");
-            stage.setScene(new Scene(root1));
-            stage.show();
-        }
-        catch (Exception ex ){
-            System.out.println(ex);
-        }
     }
 
     @FXML

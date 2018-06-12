@@ -11,6 +11,7 @@ import java.util.Observer;
 
 public class UserLogic implements IUserLogic, Observer {
 
+
     IUserRepository userRepository;
 
     public UserLogic(IUserRepository userRepository) {
@@ -38,6 +39,11 @@ public class UserLogic implements IUserLogic, Observer {
     @Override
     public User getRandomUser() {
         return userRepository.getRandomUser();
+    }
+
+    @Override
+    public User getPassword(String username) {
+        return userRepository.getPassword(username);
     }
 
     @Override

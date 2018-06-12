@@ -65,7 +65,20 @@ public class UserSqlContext extends SqlContext<User> implements IUserContext{
         }
         catch(SQLException ex){System.out.println(ex);}
 
+        return user;
+    }
 
+    private User PasswordFromFunc(ResultSet rs){
+        User user = new User();
+
+        try{
+            while (rs.next()){
+                String record = rs.getString(1);
+                user.setPassword(record);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
         return user;
     }
 
@@ -87,9 +100,9 @@ public class UserSqlContext extends SqlContext<User> implements IUserContext{
 
     public static void main(String[] args) {
         IUserContext userSqlContext = new UserSqlContext();
-        User sk = userSqlContext.getRandomUser();
+        User sk = userSqlContext.getPassword("daf");
 
-        System.out.println(sk.toString());
+        System.out.println(sk.getPassword());
     }
 
     @Override
@@ -121,5 +134,12 @@ public class UserSqlContext extends SqlContext<User> implements IUserContext{
         String query = "SELECT public.\"funcGetRandomUser\"();";
 
         return UserFromFunc(getDataByView(query));
+    }
+
+    @Override
+    public User getPassword(String username) {
+        String query = "SELECT public.\"funcGetPassFromUsername\"('"+username+"');";
+
+        return PasswordFromFunc(getDataByView(query));
     }
 }

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.effect.*?>
 <?import javafx.scene.text.*?>
 <?import java.lang.*?>
 <?import javafx.scene.canvas.*?>
@@ -15,7 +16,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
-<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" >
+<GridPane alignment="center" hgap="10" style="-fx-background-image: url('https://wallpaperwire.com/wp-content/uploads/2018/03/Lion-Wallpaper-Hd-Free-Download-High-Resolution.jpg');" vgap="10" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <columnConstraints>
       <ColumnConstraints />
    </columnConstraints>
@@ -23,13 +24,17 @@
       <RowConstraints />
    </rowConstraints>
    <children>
-      <Pane prefHeight="839.0" prefWidth="1121.0" style="-fx-background-color: #FFFFFF;">
+      <Pane prefHeight="839.0" prefWidth="1121.0" style="-fx-background-image: url('https://wallpaperwire.com/wp-content/uploads/2018/03/Lion-Wallpaper-Hd-Free-Download-High-Resolution.jpg');">
          <children>
             <ListView fx:id="lvGameParticipants" layoutX="879.0" layoutY="66.0" prefHeight="184.0" prefWidth="228.0" />
-            <VBox id="vboxChat" fx:id="vboxChat" layoutX="780.0" layoutY="267.0" prefHeight="470.0" prefWidth="327.0" style="-fx-background-color: #8FFFD2;" />
+
+            <VBox id="vboxChat" fx:id="vboxChat" layoutX="780.0" layoutY="267.0" prefHeight="470.0" prefWidth="327.0" style="-fx-background-color: grey; -fx-background-radius: 25;">
+               <effect>
+                  <DropShadow color="WHITE" height="53.62" radius="21.862499999999997" spread="0.45" width="35.83" />
+               </effect></VBox>
+
             <TextField id="tbMessage" fx:id="tbMessage" layoutX="780.0" layoutY="768.0" prefHeight="25.0" prefWidth="240.0" />
             <Button fx:id="btnSend" layoutX="1033.0" layoutY="768.0" mnemonicParsing="false" onAction="#btnSend_OnClick" prefHeight="25.0" prefWidth="74.0" text="Verstuur" />
-            <Canvas id="cvWhiteboard" fx:id="cvWhiteboard" height="709.0" layoutX="31.0" layoutY="27.0" onMouseDragged="#cvWhiteboard_OnMouseDrag" width="683.0" />
             <Button fx:id="btnTest" layoutX="56.0" layoutY="768.0" mnemonicParsing="false" onAction="#btnTest_OnClick" text="Gummen" />
             <Label fx:id="lbTimer" layoutX="765.0" layoutY="113.0" text="60">
                <font>
@@ -37,6 +42,8 @@
                </font>
             </Label>
             <Label fx:id="lbUser" layoutX="879.0" layoutY="19.0" text="Label" />
+            <StackPane layoutX="36.0" layoutY="28.0" prefHeight="709.0" prefWidth="683.0" style="-fx-background-color: white;" />
+            <Canvas id="cvWhiteboard" fx:id="cvWhiteboard" height="709.0" layoutX="36.0" layoutY="28.0" onMouseDragged="#cvWhiteboard_OnMouseDrag" width="683.0" />
             <!--<Button fx:id="btnTest" layoutX="270.0" layoutY="768.0" mnemonicParsing="false" onAction="#btnTest_OnClick" text="Button" />-->
             <!--<Button fx:id="btnTestt" layoutX="200.0" layoutY="768.0" mnemonicParsing="false" onAction="#btnTestt_OnClick" text="enable" />-->
          </children></Pane>

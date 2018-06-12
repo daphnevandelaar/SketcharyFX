@@ -1,16 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-image: url('https://wallpaperwire.com/wp-content/uploads/2018/03/Lion-Wallpaper-Hd-Free-Download-High-Resolution.jpg');" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <ListView fx:id="lvRooms" layoutX="53.0" layoutY="34.0" prefHeight="332.0" prefWidth="200.0">
          
       </ListView>
-      <Button fx:id="btnSelectRoom" layoutX="394.0" layoutY="260.0" mnemonicParsing="false" onAction="#btnSelectRoom_OnClick" text="Button" />
-      <Label fx:id="lbUser" layoutX="324.0" layoutY="85.0" text="Label" />
+      <Button fx:id="btnSelectRoom" layoutX="491.0" layoutY="182.0" mnemonicParsing="false" onAction="#btnSelectRoom_OnClick" text="Join kamer">
+         <font>
+            <Font name="System Bold Italic" size="16.0" />
+         </font></Button>
+      <Label fx:id="lbUser" layoutX="421.0" layoutY="98.0" text="Welkom __," textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="20.0" />
+         </font></Label>
+      <Label layoutX="433.0" layoutY="128.0" text="Klik op een kamer en join!" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

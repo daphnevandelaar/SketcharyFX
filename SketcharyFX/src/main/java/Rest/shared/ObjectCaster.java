@@ -13,6 +13,13 @@ public class ObjectCaster {
         return restUser;
     }
 
+    public static Models.Sketchary castRestSketchyToModelSketchy(Sketchary restSketchy, Models.Sketchary modelSketchy){
+        modelSketchy.setSketchary(restSketchy.getSketchary());
+        modelSketchy.setId(Integer.parseInt(restSketchy.getId()));
+
+        return modelSketchy;
+    }
+
     public static Models.User castRestUserToModelUser(User restUser, Models.User modelUser){
         modelUser.setUsername(restUser.getUsername());
         modelUser.setExpPoints(Integer.parseInt(restUser.getExperiencePoints()));

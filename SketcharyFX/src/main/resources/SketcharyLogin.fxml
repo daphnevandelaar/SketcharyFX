@@ -1,18 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
 <?import java.lang.*?>
 <?import java.util.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SketcharyGUI.LoginController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-image: url('https://wallpaperwire.com/wp-content/uploads/2018/03/Lion-Wallpaper-Hd-Free-Download-High-Resolution.jpg');" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <TextField fx:id="tbUsername" layoutX="226.0" layoutY="138.0" />
-      <TextField fx:id="tbPassword" layoutX="226.0" layoutY="197.0" />
-      <Button fx:id="btnLogin" layoutX="275.0" layoutY="237.0" mnemonicParsing="false" onAction="#btnLogin_OnClick" text="Login" />
-      <Label layoutX="226.0" layoutY="121.0" text="Username:" />
-      <Label layoutX="226.0" layoutY="180.0" text="Password:" />
+      <Button fx:id="btnLogin" layoutX="257.0" layoutY="234.0" mnemonicParsing="false" onAction="#btnLogin_OnClick" prefHeight="25.0" prefWidth="86.0" text="Login">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font></Button>
+      <Label layoutX="226.0" layoutY="111.0" text="Username:" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font></Label>
+      <Label layoutX="226.0" layoutY="170.0" text="Password:" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font></Label>
+      <Label layoutX="587.0" layoutY="14.0" text="Sketchary" textFill="WHITE">
+         <font>
+            <Font name="Bradley Hand ITC" size="63.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbError" layoutX="225.0" layoutY="81.0" prefHeight="17.0" prefWidth="183.0" textFill="RED">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <PasswordField fx:id="tbPassword" layoutX="226.0" layoutY="200.0" />
    </children>
 </AnchorPane>
