@@ -7,6 +7,7 @@ import Models.Game;
 import Models.Sketchary;
 import Models.User;
 import Rest.RestClient.Config;
+import Rest.RestClient.Sdk;
 import Rest.RestClient.clientResource.client.SketcharyGetrandomsketchyClientResource;
 import Rest.RestClient.clientResource.client.UserGetrandomuserClientResource;
 import Rest.shared.ObjectCaster;
@@ -17,6 +18,9 @@ public class GameLogic implements IGameLogic{
     private IUserLogic userLogic = UserFactory.ManageUsers();
     private Game game;
 
+    Sdk sdk = new Sdk();
+
+
     Config conf = new Config();
 
     public GameLogic(Game game) {
@@ -24,9 +28,14 @@ public class GameLogic implements IGameLogic{
         conf.setBasePath("http://localhost:9001/v1");
     }
 
+    public GameLogic() {
+        conf.setBasePath("http://localhost:9001/v1");
+    }
+
     @Override
     public Game startGame() {
         game = new Game(getSketchy(), getSketcher());
+        sdk.sketcharyGetrandomsketchy().getSketcharyGetrandomsketchy();
 
         return game;
     }

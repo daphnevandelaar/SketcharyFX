@@ -25,6 +25,8 @@ public class LoginController {
     PasswordField tbPassword;
     @FXML
     Label lbError;
+    @FXML
+    Button btnLoginGuest;
 
     IAuthentication authenthication;
 
@@ -32,6 +34,32 @@ public class LoginController {
         authenthication = auth;
     }
 
+    @FXML
+    public void btnLoginGuest_OnClick(){
+        try {
+            User user = new User(1, "Guest1", "guest",2, 89);
+
+                FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("SketchyRoomOverview.fxml"));
+                //TODO: naam aanpasse sketchy -- controller
+                SketcharyRoomOverviewController roomController = RoomOverviewControllerFactory.sketchyController(user);
+                loader.setController(roomController);
+                Parent root = loader.load();
+                //Open and show the new homepageMember window
+                Stage stage = new Stage();
+                stage.setTitle("Sketchary kameroverzicht");
+                stage.setScene(new Scene(root, 1121, 839));
+
+                stage.show();
+
+
+                //Close the current window
+                Stage thisStage = (Stage) btnLogin.getScene().getWindow();
+                thisStage.close();
+        }
+        catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
     @FXML
     public void btnLogin_OnClick(){

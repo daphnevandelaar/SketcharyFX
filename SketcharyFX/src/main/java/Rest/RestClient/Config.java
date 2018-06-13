@@ -21,7 +21,7 @@ public class Config {
      */
     public static final String DATETIME_FORMAT = "yyyy-MM-dd'T'HH:mm:ss.SSSXXX";
 
-    private String basePath = "https://virtserver.swaggerhub.com/380917/MouseLympix/1.0.0";
+    private String basePath = "http://localhost:9001/v1";
 
     private final SecurityConfig securityConfig = new SecurityConfig();
 

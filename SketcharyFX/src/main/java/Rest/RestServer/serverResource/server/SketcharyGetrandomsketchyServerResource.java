@@ -25,12 +25,14 @@ public class SketcharyGetrandomsketchyServerResource extends AbstractServerResou
 
             Sketchary sketch = new Sketchary();
 
-	    ISketcharyLogic sketcharyLogic = SketcharyFactory.manageSketchys();
-	    Models.Sketchary msketch = sketcharyLogic.getRandomSketchary();
-	    sketch.setSketchary(msketch.getSketchary());
-	    sketch.setId(Integer.toString(msketch.getId()));
+            //TODO: get from database
+//            ISketcharyLogic sketcharyLogic = SketcharyFactory.manageSketchys();
+//            Models.Sketchary msketch = sketcharyLogic.getRandomSketchary();
+//            sketch.setSketchary(msketch.getSketchary());
+//            sketch.setId(Integer.toString(msketch.getId()));
 
-
+            sketch.setSketchary("Leeuw");
+            sketch.setId("1");
 
             result = sketch;
 

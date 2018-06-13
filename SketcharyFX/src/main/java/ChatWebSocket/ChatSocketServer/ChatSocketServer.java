@@ -96,7 +96,6 @@ public class ChatSocketServer {
                     // Send the message to all clients that are subscribed to this property
                     if (eventPropertySessions.get(eventProperty) != null) {
                         for(Session sess : eventPropertySessions.get(eventProperty)){
-                                System.out.println("Msg to: " + sess.getId());
                                 sess.getAsyncRemote().sendText(jsonMsg);
                             }
                         }

@@ -5,10 +5,11 @@ import ChatWebSocket.ChatSocketClient.*;
 import DrawWebSocket.DrawSocketClient.*;
 
 
-import Models.DrawEvent;
-import Models.Room;
-import Models.User;
+import Logic.GameLogic;
+import Models.*;
 import PlayersWebSocket.PlayerSocketClient.Player;
+import Rest.RestClient.Sdk;
+import Rest.RestClient.clientResource.client.SketcharyGetrandomsketchyClientResource;
 import SketcharyLogic.WhiteboardHandler;
 import Sockets.SocketMessage;
 import Sockets.SocketMessageIdentifier;
@@ -53,7 +54,7 @@ public class Controller implements Observer {
     @FXML
     private TextField tbUsername;
     @FXML
-    private Button btnTest;
+    private Button btnErase;
     @FXML
     private Label lbTimer;
     @FXML
@@ -144,14 +145,14 @@ public class Controller implements Observer {
     }
 
     @FXML
-    private void btnTest_OnClick(ActionEvent event){
+    private void btnErase_OnClick(){
 
 //        GameLogic gameLogic = new GameLogic();
 //        Game game = gameLogic.startGame();
 //
 //        System.out.println(game.getSketcher());
 //        System.out.println(game.getSketchy());
-        lbUser.setText(user.getUsername());
+
 
     }
 
