@@ -1,24 +1,31 @@
 
-[squid:HiddenFieldCheck";Rename "message" which hides the field declared at line 19.(­Ğ©
-;squid:S1170"!Make this final field static too.(’Ó Úÿÿÿÿÿ
-usquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(©—ìüÿÿÿÿ
-M
-squid:S106"9Replace this use of System.out or System.err by a logger.(‰—•ı
-Gsquid:S1135"2Complete the task associated to this TODO comment.(ı”œº
 psquid:S1450"VRemove the "message" field and declare it as a local variable in the relevant methods.(ù„è¿ûÿÿÿÿ
-[squid:HiddenFieldCheck";Rename "message" which hides the field declared at line 19.(­Ğ©
-[squid:HiddenFieldCheck";Rename "message" which hides the field declared at line 19.(­Ğ©
-8squid:S1148"#Use a logger to log this exception.(Ç’Çê
-8squid:S1148"#Use a logger to log this exception.(Ç’Çê
-M
-squid:S106"9Replace this use of System.out or System.err by a logger.(˜ÚĞÑ
-[squid:HiddenFieldCheck";Rename "message" which hides the field declared at line 19.(­Ğ©
-›squid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(éù–èûÿÿÿÿ
-R
-squid:S106"9Replace this use of System.out or System.err by a logger.(ı™øøÿÿÿÿ
-M
-squid:S106"9Replace this use of System.out or System.err by a logger.(÷È«Æ
-Lsquid:S1135"2Complete the task associated to this TODO comment.(ˆ±ã‘ûÿÿÿÿ
-Esquid:S1068"+Remove this unused "message" private field.(ù„è¿ûÿÿÿÿ
 M
 squid:S106"9Replace this use of System.out or System.err by a logger.(’´³¹
+usquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(©—ìüÿÿÿÿ
+Esquid:S1068"+Remove this unused "message" private field.(ù„è¿ûÿÿÿÿ
+8squid:S1148"#Use a logger to log this exception.(Ç’Çê
+[squid:HiddenFieldCheck";Rename "message" which hides the field declared at line 21.(­Ğ©
+[squid:HiddenFieldCheck";Rename "message" which hides the field declared at line 21.(­Ğ©
+[squid:HiddenFieldCheck";Rename "message" which hides the field declared at line 21.(­Ğ©
+[squid:HiddenFieldCheck";Rename "message" which hides the field declared at line 21.(­Ğ©
+M
+squid:S106"9Replace this use of System.out or System.err by a logger.(‰—•ı
+8squid:S1148"#Use a logger to log this exception.(Ç’Çê
+T
+squid:S106"9Replace this use of System.out or System.err by a logger.(ØøØî8÷¿ëÉÀ,
+Y
+squid:S106"9Replace this use of System.out or System.err by a logger.(Ÿû˜ıÿÿÿÿ8÷¿ëÉÀ,
+T
+squid:S106"9Replace this use of System.out or System.err by a logger.(û”£ò8÷¿ëÉÀ,
+Y
+squid:S106"9Replace this use of System.out or System.err by a logger.(²ëİÌıÿÿÿÿ8÷¿ëÉÀ,
+Y
+squid:S106"9Replace this use of System.out or System.err by a logger.(ëÇ¾”ûÿÿÿÿ8÷¿ëÉÀ,
+S
+squid:S106"9Replace this use of System.out or System.err by a logger.(ÑŞéo8÷¿ëÉÀ,
+T
+squid:S106"9Replace this use of System.out or System.err by a logger.(ïÏäÙ8÷¿ëÉÀ,
+T
+squid:S106"9Replace this use of System.out or System.err by a logger.(ïÏäÙ8÷¿ëÉÀ,
+Bsquid:S1170"!Make this final field static too.(¾¼ë÷øÿÿÿÿ8÷¿ëÉÀ,

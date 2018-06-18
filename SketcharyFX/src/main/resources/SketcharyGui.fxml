@@ -33,8 +33,8 @@
 
             <TextField id="tbMessage" fx:id="tbMessage" layoutX="780.0" layoutY="768.0" prefHeight="25.0" prefWidth="240.0" />
             <Button fx:id="btnSend" layoutX="1033.0" layoutY="768.0" mnemonicParsing="false" onAction="#btnSend_OnClick" prefHeight="25.0" prefWidth="74.0" text="Verstuur" />
-            <Button fx:id="btnErase" layoutX="56.0" layoutY="768.0" mnemonicParsing="false" onAction="#btnErase_OnClick" text="Gummen" />
-            <Label fx:id="lbTimer" layoutX="765.0" layoutY="113.0" text="60">
+            <Button fx:id="btnErase" layoutX="56.0" layoutY="768.0" mnemonicParsing="false" onAction="#btnErase_OnClick" text="Start spel" />
+            <Label fx:id="lbTimer" layoutX="765.0" layoutY="113.0" text="60" textFill="RED">
                <font>
                   <Font size="47.0" />
                </font>
@@ -42,6 +42,11 @@
             <Label fx:id="lbUser" layoutX="879.0" layoutY="19.0" text="Label" />
             <StackPane layoutX="36.0" layoutY="28.0" prefHeight="709.0" prefWidth="683.0" style="-fx-background-color: white;" />
             <Canvas id="cvWhiteboard" fx:id="cvWhiteboard" height="709.0" layoutX="36.0" layoutY="28.0" onMouseDragged="#cvWhiteboard_OnMouseDrag" width="683.0" />
+            <Label fx:id="lbSketchy" layoutX="770.0" layoutY="197.0" text="sketchy" textFill="#e1e1e1">
+               <font>
+                  <Font name="Bodoni MT Black" size="14.0" />
+               </font>
+            </Label>
             <!--<Button fx:id="btnTest" layoutX="270.0" layoutY="768.0" mnemonicParsing="false" onAction="#btnTest_OnClick" text="Button" />-->
             <!--<Button fx:id="btnTestt" layoutX="200.0" layoutY="768.0" mnemonicParsing="false" onAction="#btnTestt_OnClick" text="enable" />-->
          </children></Pane>

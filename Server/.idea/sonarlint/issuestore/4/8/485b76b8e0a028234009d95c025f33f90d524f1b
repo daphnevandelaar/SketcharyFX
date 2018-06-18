@@ -1,12 +1,8 @@
 
-ysquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¨È¡Í8≤Áíñø,
-isquid:CommentedOutCodeLine,"<This block of commented-out lines of code should be removed.(ŒÊæÌ8≤Áíñø,
-isquid:CommentedOutCodeLineH"<This block of commented-out lines of code should be removed.(ŒÊæÌ8≤Áíñø,
 [
-squid:S1060"9Replace this use of System.out or System.err by a logger.(ì‰·«˘ˇˇˇˇ8≤Áíñø,
-Hsquid:S1181K"%Catch Exception instead of Throwable.(ïî¯æ¯ˇˇˇˇ8≤Áíñø,
-~squid:S00115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(¸ñàé˙ˇˇˇˇ8≤Áíñø,
-Hsquid:S1181/"%Catch Exception instead of Throwable.(ïî¯æ¯ˇˇˇˇ8≤Áíñø,
-[
-squid:S106L"9Replace this use of System.out or System.err by a logger.(ì‰·«˘ˇˇˇˇ8≤Áíñø,
-xsquid:S00115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(ÃØ≈T8≤Áíñø,
+squid:S106/"9Replace this use of System.out or System.err by a logger.(ì‰·«˘ˇˇˇˇ8—Â÷ê¡,
+ysquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¨È¡Í8—Â÷ê¡,
+ysquid:UselessImportCheck"IRemove this unused import 'DrawSocket.DrawSocketServer.DrawSocketServer'.(ñˇÑï˝ˇˇˇˇ8—Â÷ê¡,
+Hsquid:S1181."%Catch Exception instead of Throwable.(ïî¯æ¯ˇˇˇˇ8—Â÷ê¡,
+~squid:S00115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(Ø®‹∆˛ˇˇˇˇ8—Â÷ê¡,
+isquid:CommentedOutCodeLine+"<This block of commented-out lines of code should be removed.(ŒÊæÌ8—Â÷ê¡,

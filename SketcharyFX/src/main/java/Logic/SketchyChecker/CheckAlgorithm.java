@@ -10,7 +10,8 @@ public class CheckAlgorithm {
     //TODO: letters en cijfers
 
     public static boolean checkSketchy(String sketchy, String message){
-        List<String> listMsg = createListOfWordsFromMessage("hallo, de plany kan best groot worden");
+        List<String> listMsg = createListOfWordsFromMessage(message);
+        System.out.println("In ALG sktc: "+sketchy + " msg: " + message);
         return CheckWord(sketchy, listMsg);
     }
 
@@ -22,7 +23,6 @@ public class CheckAlgorithm {
 
         //Step 2: check the words in message
             if(sketchy.equals(guessedWord)){
-                System.out.println("good");
                 //break; //staat het goede woord er tussen, stoppen met zoeken
                 return true;
             }
@@ -34,14 +34,12 @@ public class CheckAlgorithm {
 
         //Step 4: check place of typo, whether it is a nearby key on the keyboard
                     if(IsItANearbyKey(sketchy, guessedWord)){
-                        System.out.println("Yes juiste woord");
                         return true;
                     }
 
                 }
                 else{ }
 
-                System.out.println("wrong");
             }
         }
         
@@ -117,6 +115,7 @@ public class CheckAlgorithm {
     {
         List<String> message = createListOfWordsFromMessage("hallo, de plany kan best groot worden");
         CheckWord("plant", message);
+        System.out.println("DITTTTT: " + checkSketchy("plant", "dit is een plant"));
         System.out.println(message);
     }
 

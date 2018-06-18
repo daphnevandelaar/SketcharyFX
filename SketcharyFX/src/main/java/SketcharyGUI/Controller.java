@@ -8,8 +8,6 @@ import DrawWebSocket.DrawSocketClient.*;
 import Logic.GameLogic;
 import Models.*;
 import PlayersWebSocket.PlayerSocketClient.Player;
-import Rest.RestClient.Sdk;
-import Rest.RestClient.clientResource.client.SketcharyGetrandomsketchyClientResource;
 import SketcharyLogic.WhiteboardHandler;
 import Sockets.SocketMessage;
 import Sockets.SocketMessageIdentifier;
@@ -34,9 +32,8 @@ import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
-import javafx.util.Duration;
-import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
+import javax.swing.*;
 import java.util.Observable;
 import java.util.Observer;
 
@@ -59,9 +56,11 @@ public class Controller implements Observer {
     private Label lbTimer;
     @FXML
     private Label lbUser;
+    @FXML
+    private Label lbSketchy;
 
     private Timeline timeline;
-    private IntegerProperty timeSeconds = new SimpleIntegerProperty(60);
+    private IntegerProperty timeSeconds = new SimpleIntegerProperty(600000);
     private User user;
 
     WhiteboardHandler whiteboardHandler = new WhiteboardHandler();
@@ -128,33 +127,44 @@ public class Controller implements Observer {
 //            lvGameParticipants.getItems().add(user);
 //        }
     }
+    private Sketchary sketchy;
 
     private void startGame(){
-        lbTimer.textProperty().bind(timeSeconds.asString());
-        timeSeconds.set(3);
-        timeline = new Timeline();
-        timeline.getKeyFrames().add(
-                new KeyFrame(Duration.seconds(3+1),
-                        new KeyValue(timeSeconds, 0)));
-        timeline.playFromStart();
 
-        timeline.setOnFinished((ActionEvent t) -> {
-            //TODO: implement einde van de game hier
-            throw new NotImplementedException();
-        });
+        GameLogic gameLogic = new GameLogic();
+        sketchy = gameLogic.getSketchy();
+
+        lbSketchy.setText(sketchy.getSketchary());
+
+
+//                lbTimer.textProperty().bind(timeSeconds.asString());
+//                timeline = new Timeline();
+//                timeline.getKeyFrames().add(
+//                        new KeyFrame(Duration.seconds(10),
+//                                new KeyValue(timeSeconds, 0)));
+//                timeline.playFromStart();
+//
+//                timeline.setOnFinished((ActionEvent t) -> {
+//                    //TODO: implement einde van de game hier
+//                });
+
+
+//        Timer timer = new Timer(2000, e -> lbSketchy.setText("Done"));
+//        timer.setRepeats(false);
+//        timer.start();
     }
 
     @FXML
     private void btnErase_OnClick(){
 
+        startGame();
 //        GameLogic gameLogic = new GameLogic();
 //        Game game = gameLogic.startGame();
 //
 //        System.out.println(game.getSketcher());
 //        System.out.println(game.getSketchy());
-
-
     }
+
 
     private void drawDot(Color color, double xPos, double yPos) {
         // Graphics
@@ -167,6 +177,19 @@ public class Controller implements Observer {
 
     @FXML
     private void btnSend_OnClick(ActionEvent event){
+        GameLogic gameLogic = new GameLogic();
+        String sketch = sketchy.getSketchary();
+        String msg = tbMessage.getText();
+
+        boolean check = gameLogic.sketchyGuessed(sketch, msg);
+        System.out.println(check);
+        if (check) {
+            System.out.println("TRUE");
+            lbSketchy.setText("GERADENN!!!");
+        }
+        else{
+            lbSketchy.setText("Fout het is: " + sketchy.getSketchary());
+        }
         broadcastCreatedMessage(user.getUsername(), room.getRoomName(), tbMessage.getText());
     }
 

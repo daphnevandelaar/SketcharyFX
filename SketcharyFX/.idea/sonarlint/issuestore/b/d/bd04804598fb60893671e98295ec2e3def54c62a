@@ -1,0 +1,10 @@
+
+qsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ÔÖØ^
+ssquid:S14883"\Immediately return this expression instead of assigning it to the temporary variable "user".(½±‚³
+Dsquid:S1068"-Remove this unused "userLogic" private field.(ÑÜİ
+[
+squid:S106;"9Replace this use of System.out or System.err by a logger.(½¡ã¨ÿÿÿÿÿ8öÊ¡ Á,
+[
+squid:S106<"9Replace this use of System.out or System.err by a logger.(‡²é‚ûÿÿÿÿ8ªÉ  Á,
+Nsquid:S1068"2Remove this unused "sketcharyLogic" private field.(óÁËäüÿÿÿÿ
+Psquid:S1135+"2Complete the task associated to this TODO comment.(†â‹Û8ÍØÒŸÁ,

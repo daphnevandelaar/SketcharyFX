@@ -40,7 +40,8 @@ public class GameLogic implements IGameLogic{
         return game;
     }
 
-    private Sketchary getSketchy(){
+    //TODO: private maken na demo
+    public Sketchary getSketchy(){
         SketcharyGetrandomsketchyClientResource getRandomSketchyClient = new SketcharyGetrandomsketchyClientResource(conf);
         return ObjectCaster.castRestSketchyToModelSketchy(getRandomSketchyClient.getSketcharyGetrandomsketchy(), new Sketchary());
     }
@@ -54,6 +55,9 @@ public class GameLogic implements IGameLogic{
 
     @Override
     public Boolean sketchyGuessed(String sketchy, String message) {
+
+        System.out.println("Sketchy: " + sketchy + " Msg: " + message);
+        System.out.println(CheckAlgorithm.checkSketchy(sketchy, message));
 
        return CheckAlgorithm.checkSketchy(sketchy, message);
     }

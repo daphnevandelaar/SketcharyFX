@@ -31,7 +31,7 @@ public class SketcharyGetrandomsketchyServerResource extends AbstractServerResou
 //            sketch.setSketchary(msketch.getSketchary());
 //            sketch.setId(Integer.toString(msketch.getId()));
 
-            sketch.setSketchary("Leeuw");
+            sketch.setSketchary("leeuw");
             sketch.setId("1");
 
             result = sketch;
