@@ -8,4 +8,5 @@ public interface IChatter {
     void unsubscribe(String userProperty, String eventProperty);        //user unsubscribes from chat
     void unregister(String userProperty, String eventProperty);         //user logs out from system
     void update(ChatMessage msg);                                       //user sends message to certain chat
+    void userLogin(String userProperty, String eventProperty);
 }

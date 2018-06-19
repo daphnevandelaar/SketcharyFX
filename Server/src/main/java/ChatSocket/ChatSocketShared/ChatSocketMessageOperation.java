@@ -7,4 +7,5 @@ public enum ChatSocketMessageOperation {
     REGISTER,           //Register to server
     UNREGISTER,         //Unregister from server
     USERLOGIN,
+    USERLOGOUT,
 }

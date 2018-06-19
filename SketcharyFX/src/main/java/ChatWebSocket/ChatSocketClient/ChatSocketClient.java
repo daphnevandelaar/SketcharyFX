@@ -3,22 +3,22 @@ package ChatWebSocket.ChatSocketClient;
 
 import ChatWebSocket.ChatSocketShared.ChatSocketMessage;
 import ChatWebSocket.ChatSocketShared.ChatSocketMessageOperation;
-import Sockets.SocketMessageIdentifier;
 import com.google.gson.Gson;
 import com.google.gson.JsonSyntaxException;
 
 import javax.websocket.*;
 import java.io.IOException;
 import java.net.URI;
+import java.util.Observable;
 
 @ClientEndpoint
-public class ChatSocketClient extends Chatter {
-
+public class ChatSocketClient extends Observable implements IChatter {
     private static ChatSocketClient instance = null;
 
     private final String uri = "ws://localhost:8097/chat/";
     private Session session;
     private String message;
+    private String username;
     private Gson gson = null;
     // Status of the webSocket client
     boolean isRunning = false;
@@ -85,56 +85,26 @@ public class ChatSocketClient extends Chatter {
         processMessage(message);
     }
 
-    private void processMessage(String jsonMsg) {
-        // Parse incoming message
-        ChatSocketMessage wsMessage;
+    private ChatSocketMessage parseJsonMessage(String jsonMessage){
+        ChatSocketMessage chatSocketMessage = new ChatSocketMessage();
         try {
-            wsMessage = gson.fromJson(jsonMsg, ChatSocketMessage.class);
+            chatSocketMessage = gson.fromJson(jsonMessage, ChatSocketMessage.class);
         }
         catch (JsonSyntaxException ex) {
-            System.out.println("[WebSocket Client ERROR: cannot parse Json message " + jsonMsg);
-            return;
+            System.out.println("[WebSocket Client ERROR: cannot parse Json message " + jsonMessage);
         }
 
-        // Only operation update property will be further processed
-        ChatSocketMessageOperation operation;
-        operation = wsMessage.getOperation();
-        if (operation == null || operation != ChatSocketMessageOperation.UPDATE) {
-            System.out.println("[WebSocket Client ERROR: update property operation expected]");
-            return;
-        }
+        return chatSocketMessage;
+    }
 
-        // Obtain property from message
-        String userProperty = wsMessage.getUserProperty();
-        if (userProperty == null || "".equals(userProperty)) {
-            System.out.println("[WebSocket Client ERROR: property not defined]");
-            return;
-        }
+    private void processMessage(String jsonMsg) {
 
-        // Obtain property from message
-        String eventProperty = wsMessage.getEventProperty();
-        if (eventProperty == null || "".equals(eventProperty)) {
-            System.out.println("[WebSocket Client ERROR: property not defined]");
-            return;
-        }
+        ChatMessage msg = MessageProcessor.processor(jsonMsg);
 
-        // Obtain content from message
-        String content = wsMessage.getContent();
-        if (content == null || "".equals(content)) {
-            System.out.println("[WebSocket Client ERROR: message without content]");
-            return;
-        }
-
-        // Create instance of CommunicaterMessage for observers
-        ChatMessage commMessage = new ChatMessage();
-        commMessage.setUserProperty(userProperty);
-        commMessage.setEventProperty(eventProperty);
-        commMessage.setContent(content);
-        commMessage.setIdentifier(SocketMessageIdentifier.CHATMESSAGE);
-
+        System.out.println("Notifying Chatmessage: " + msg.getUserProperty() + " " + msg.getUsers() + " " + msg.getEventProperty() + " "+ msg.getUsers());
         // Notify observers
         this.setChanged();
-        this.notifyObservers(commMessage);
+        this.notifyObservers(msg);
     }
 
     public void register(String userProperty, String eventProperty) {
@@ -151,7 +121,7 @@ public class ChatSocketClient extends Chatter {
         session.getAsyncRemote().sendText(jsonMessage);
     }
 
-public void subscribe(String userProperty, String eventProperty) {
+    public void subscribe(String userProperty, String eventProperty) {
         ChatSocketMessage message = new ChatSocketMessage();
         message.setOperation(ChatSocketMessageOperation.SUBSCRIBEEVENT);
         message.setUserProperty(userProperty);
@@ -182,6 +152,15 @@ public void subscribe(String userProperty, String eventProperty) {
         chatMsg.setUserProperty(msg.getUserProperty());
         chatMsg.setEventProperty(msg.getEventProperty());
         chatMsg.setContent(msg.getContent());
+        sendMessageToServer(chatMsg);
+    }
+
+    @Override
+    public void userLogin(String userProperty, String eventProperty) {
+        ChatSocketMessage chatMsg = new ChatSocketMessage();
+        chatMsg.setOperation(ChatSocketMessageOperation.USERLOGIN);
+        chatMsg.setUserProperty(userProperty);
+        chatMsg.setEventProperty(eventProperty);
         sendMessageToServer(chatMsg);
     }
 }

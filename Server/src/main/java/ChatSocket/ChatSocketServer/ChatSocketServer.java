@@ -3,6 +3,7 @@ package ChatSocket.ChatSocketServer;
 
 import ChatSocket.ChatSocketShared.ChatSocketMessage;
 import ChatSocket.ChatSocketShared.ChatSocketMessageOperation;
+import Sockets.SocketMessage;
 import com.google.gson.Gson;
 import com.google.gson.JsonSyntaxException;
 
@@ -23,11 +24,12 @@ public class ChatSocketServer {
     // Map each property to list of sessions that are subscribed to that property
     private static final Map<String,List<Session>> userPropertySessions = new HashMap();
     private static final Map<String,List<Session>> eventPropertySessions = new HashMap();
+    private static final Map<String, Session> sessionsWithUser = new HashMap();
 
 
     @OnOpen
     public void onConnect(Session session){
-        System.out.println("[WebSocket Connected] SessionID: " + session.getId());
+        System.out.println("[Chatsocket Connected] SessionID: " + session.getId());
         String message = String.format("[New client with client side session ID]: %s", session.getId());
         sessions.add(session);
         System.out.println("[#sessions]: " + sessions.size());
@@ -47,11 +49,11 @@ public class ChatSocketServer {
         cause.printStackTrace(System.err);
     }
 
+    ArrayList<String> list = new ArrayList<String>();
+
     private void handleMessageFromClient(String jsonMsg, Session session) {
         Gson gson = new Gson();
         ChatSocketMessage chatMsg = null;
-
-        System.out.println(jsonMsg);
 
         try {
             chatMsg = gson.fromJson(jsonMsg, ChatSocketMessage.class);
@@ -64,12 +66,9 @@ public class ChatSocketServer {
         // Operation defined in message
         ChatSocketMessageOperation operation;
         operation = chatMsg.getOperation();
-        System.out.println("Operation: " + operation);
         // Process message based on operation
         String userProperty = chatMsg.getUserProperty();
         String eventProperty = chatMsg.getEventProperty();
-        System.out.println("Event: " + eventProperty);
-        System.out.println("EventSess: " + eventPropertySessions.get(eventProperty));
         if(operation != null && userProperty != null){
             switch(operation){
                 case REGISTER:
@@ -95,15 +94,29 @@ public class ChatSocketServer {
                     break;
                 case USERLOGIN:
                     if (eventPropertySessions.get(eventProperty) != null) {
-                        userPropertySessions.get(userProperty).add(session);
+                        for(Session sess : eventPropertySessions.get(eventProperty)){
+                                sessionsWithUser.put(userProperty, session);
 
-                        if(userPropertySessions.get(userProperty) != null){
-                            for(Session sess : userPropertySessions.get(userProperty)){
-                                sess.getAsyncRemote().sendText(jsonMsg);
+                                list.add(userProperty);
+                                ChatSocketMessage msg = new ChatSocketMessage();
+                                msg.setOperation(ChatSocketMessageOperation.USERLOGIN);
+                                msg.setUsers(list);
+                                msg.setEventProperty(eventProperty);
+                                msg.setUserProperty(userProperty);
+
+                                String json;
+                                try {
+                                    json = gson.toJson(msg);
+                                }
+                                catch (JsonSyntaxException ex) {
+                                    System.out.println("[WebSocket ERROR: cannot parse Json message " + jsonMsg);
+                                    return;
+                                }
+                                System.out.println("Json list to send: " + json);
+                                sess.getAsyncRemote().sendText(json);
                             }
-                        }
 
-                        System.out.println("New subscription from: " + userProperty + " to: " + eventProperty);
+                        System.out.println("New login from: " + userProperty + " to: " + eventProperty);
                     }
                     break;
                 case UNSUBSCRIBEEVENT:

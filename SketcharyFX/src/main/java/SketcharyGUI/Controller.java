@@ -33,7 +33,12 @@ import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 
+<<<<<<< Updated upstream
 import javax.swing.*;
+=======
+import javax.websocket.Session;
+import java.util.Collection;
+>>>>>>> Stashed changes
 import java.util.Observable;
 import java.util.Observer;
 
@@ -66,7 +71,7 @@ public class Controller implements Observer {
     WhiteboardHandler whiteboardHandler = new WhiteboardHandler();
     Drawer drawer = null;
     Player player = null;
-    Chatter chatter = null;
+    ChatSocketClient chatter = null;
     private Room room;
 
     public Controller(User user, Room room){
@@ -110,7 +115,7 @@ public class Controller implements Observer {
         chatter.start();
         chatter.register(user.getUsername(), room.getRoomName());
         chatter.subscribe(user.getUsername(), room.getRoomName());
-
+        chatter.userLogin(user.getUsername(), room.getRoomName());
         // Establish connection with server
 
 
@@ -242,7 +247,26 @@ public class Controller implements Observer {
                 String userProperty = chatMessage.getUserProperty();
                 String chatContent = chatMessage.getContent();
                 broadcastMessage(chatContent, userProperty);
+                break;
+            case PLAYERMESSAGE:
+                ChatMessage playerMessage = (ChatMessage) arg;
+                Collection playerProperty = playerMessage.getUsers();
+                //String roomProperty = playerMessage.getContent();
+                for (Object s :
+                        playerProperty) {
+                    broadcastPlayer(s.toString());
+                }
+
         }
+    }
+
+    private void broadcastPlayer(String userProperty){
+        Platform.runLater(new Runnable() {
+            @Override
+            public void run() {
+                lvGameParticipants.getItems().add(userProperty);
+            }
+        });
     }
 
     private void broadcastMessage(String content, String userProperty) {

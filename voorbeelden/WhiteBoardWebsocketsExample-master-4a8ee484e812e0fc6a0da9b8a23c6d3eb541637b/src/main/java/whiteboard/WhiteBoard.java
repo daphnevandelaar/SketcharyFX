@@ -43,14 +43,13 @@ import javafx.stage.Stage;
  * @author Nico Kuijpers
  */
 public class WhiteBoard extends Application implements Observer {
-
     // Drawing panel and its size
     private Canvas panel;
     private final int panelWidth = 500;
     private final int panelHeight = 500;
     
     // Communicate with other white boards
-    private Communicator communicator = null;
+    private CommunicatorClientWebSocket communicator = null;
     
     // Current color to draw
     private Color currentColor;

@@ -19,6 +19,7 @@ public class ChatSocketServer {
 
     // All sessions
     private static final List<Session> sessions = new ArrayList();
+    private static final Map<String, List<Session>> sessionsWithUser = new HashMap();
 
     // Map each property to list of sessions that are subscribed to that property
     private static final Map<String,List<Session>> userPropertySessions = new HashMap();
@@ -33,6 +34,7 @@ public class ChatSocketServer {
     }
     @OnMessage
     public void onText(String message, Session session){
+        System.out.println("Got message");
         handleMessageFromClient(message, session);
     }
     @OnClose

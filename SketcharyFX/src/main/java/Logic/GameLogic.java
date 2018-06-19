@@ -4,6 +4,7 @@ import Factory.SketcharyFactory;
 import Factory.UserFactory;
 import Logic.SketchyChecker.CheckAlgorithm;
 import Models.Game;
+import Models.Room;
 import Models.Sketchary;
 import Models.User;
 import Rest.RestClient.Config;
@@ -11,6 +12,7 @@ import Rest.RestClient.Sdk;
 import Rest.RestClient.clientResource.client.SketcharyGetrandomsketchyClientResource;
 import Rest.RestClient.clientResource.client.UserGetrandomuserClientResource;
 import Rest.shared.ObjectCaster;
+import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 public class GameLogic implements IGameLogic{
 
@@ -34,8 +36,17 @@ public class GameLogic implements IGameLogic{
 
     @Override
     public Game startGame() {
-        game = new Game(getSketchy(), getSketcher());
-        sdk.sketcharyGetrandomsketchy().getSketcharyGetrandomsketchy();
+        game = new Game();
+
+        Rest.shared.Sketchary sketchy = sdk.sketcharyGetrandomsketchy().getSketcharyGetrandomsketchy();
+        Sketchary mSketchy = new Sketchary();
+        mSketchy.setId(Integer.parseInt(sketchy.getId()));
+        mSketchy.setSketchary(sketchy.getSketchary());
+        game.setSketchy(mSketchy);
+
+        game.setRoom(getRoom());
+
+
 
         return game;
     }
@@ -46,11 +57,15 @@ public class GameLogic implements IGameLogic{
         return ObjectCaster.castRestSketchyToModelSketchy(getRandomSketchyClient.getSketcharyGetrandomsketchy(), new Sketchary());
     }
 
-    private User getSketcher(){
+    public User getSketcher(){
         UserGetrandomuserClientResource getRandomUserClient = new UserGetrandomuserClientResource(conf);
         User user = ObjectCaster.castRestUserToModelUser(getRandomUserClient.getUserGetrandomuser(), new User());
 
         return user;
+    }
+
+    public Room getRoom(){
+        throw new NotImplementedException();
     }
 
     @Override
